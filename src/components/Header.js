@@ -4,17 +4,22 @@ import logo from "../Assets/econotravel-logo.png";
 
 function Header(){
     return(
-      <div className="header">
-          <div className="logo-container">
-              <img className="logo" src={logo}/>
+      <header className="header">
+          <div className="container">
+              <div className="logo-container">
+                  <img className="logo" src={logo}/>
+              </div>
+              <nav>
+                   <ul className="main-nav">
+                       <li className="link link-active">
+                           <a>Home</a>
+                       </li>
+                       <li className="link"><a>About Us</a></li>
+                       <li className="link"><a>Enquire</a></li>
+                   </ul>
+              </nav>
           </div>
-
-           <ul ClassName="botones-header">
-               <li><a>Home</a></li>
-               <li><a>About Us</a></li>
-               <li><a>Enquire</a></li>
-           </ul>
-      </div>
+      </header>
     );
 }
 
