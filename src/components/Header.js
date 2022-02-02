@@ -1,10 +1,14 @@
 import React from "react";
-import logo from "../Assets/logo_transparente.png";
+import "../Styles/HeaderStyle.css";
+import logo from "../Assets/econotravel-logo.png";
 
 function Header(){
     return(
       <div className="header">
-          <img className="logo" src={logo}/>
+          <div className="logo-container">
+              <img className="logo" src={logo}/>
+          </div>
+
            <ul ClassName="botones-header">
                <li><a>Home</a></li>
                <li><a>About Us</a></li>
