@@ -1,5 +1,6 @@
 import './App.css';
 import {useEffect, useState} from "react";
+import Header from "./components/Header";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             <div className="newExperienceForm">
                 <input onChange={e => setNewExperience(e.target.value)} type="text"/>
                 <button onClick={() => addExperience(newExperience)}>Add experience</button>
