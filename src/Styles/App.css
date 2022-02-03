@@ -107,11 +107,9 @@ option{
     height: 40px;
     border-radius: 8px;
     border: none;
-    background: #B0B0B0;
     padding: 0.5rem 3rem;
     text-transform: uppercase;
     font-weight: 600;
-
 }
 .btn-primary{
     background: #4C8055;
@@ -121,4 +119,25 @@ option{
 .btn-primary:hover{
     background: #2f5933;
     color: #ffffff;
+}
+
+.btn-icon{
+    background: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    height: initial;
+    padding: 10px;
+}
+
+.btn-icon:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.far{
+    font-size: 1.8rem;
 }
