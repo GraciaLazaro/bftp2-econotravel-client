@@ -24,10 +24,6 @@ footer {
     gap: 20px;
 }
 
-.copyright > p, .follow-us > p {
-    margin: 0;
-    padding: 0;
-}
 
 .admin-icons > button {
     background: none;
