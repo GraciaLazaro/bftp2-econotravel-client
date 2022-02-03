@@ -34,9 +34,9 @@
 }
 
 .card-price{
-    font-size: 36px;
+    font-size: 1.8rem;
     font-weight: 500;
-    line-height: 36px;
+    line-height: 1.8rem;
 }
 .card-price-detail{
     font-size: 0.8rem;

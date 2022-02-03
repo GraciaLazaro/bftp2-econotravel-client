@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-*{
+*, ul, figure, h1, h2, p{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 
 body{
@@ -29,7 +28,7 @@ body{
 }
 
 .link-active a{
-    color: #4C8055;
+    color: #4C8055!important;
     border-bottom: solid 2px #4C8055;
 }
 
@@ -54,6 +53,7 @@ body{
      color: #464646;
      font-size: 1.6rem;
      grid-column-start: 2;
+    font-weight: 600;
  }
 
 .align-right{
@@ -100,6 +100,7 @@ option{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 30px;
+    row-gap: 2.5rem;
     padding: 2.5rem 1rem;
 }
 
