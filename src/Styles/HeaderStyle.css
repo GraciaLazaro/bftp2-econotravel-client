@@ -1,16 +1,16 @@
 .header{
     background-color: #fff;
-    height: 90px;
 }
 .header > .container{
-    display: flex;
-    margin: auto;
     padding: 5px 0;
     align-items: center;
+    display: flex;
 }
 
 .logo-container{
-    width: 120px;
+    width: 105px;
+    display: flex;
+    align-items: center;
 }
 
 .logo-container img{
@@ -19,7 +19,7 @@
 }
 
 nav{
-    width: calc(100% - 120px);
+    width: calc(100% - 110px);
 }
 
 nav ul{
@@ -28,7 +28,7 @@ nav ul{
     display: flex;
 }
 nav ul li{
-    padding: 15px 20px;
+    padding: 15px 28px;
     text-transform: uppercase;
     font-weight: 600;
 }
