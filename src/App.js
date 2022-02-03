@@ -44,7 +44,6 @@ function App() {
             <ul>
                 {experiences.map(experience => <li>{experience.name}</li>)}
             </ul>
-            <Footer />
 
             <main className="container">
                 <div className="page-title">
@@ -65,6 +64,7 @@ function App() {
 
 
             </main>
+            <Footer />
         </div>
     );
 }
