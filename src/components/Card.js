@@ -9,8 +9,19 @@ function Card(){
                 <figure>
                     <img className="image" src={modernista} alt="photo"/>
                     <div className="hover-layer">
-                    <button className="btn">view more</button>
-                </div>
+                    <button className="btn btn-icon">
+                        <i className="far fa-eye"></i>
+                        <span>view more</span>
+                    </button>
+                        <button className="btn btn-icon">
+                            <i className="far fa-edit"></i>
+                            <span>edit</span>
+                        </button>
+                        <button className="btn btn-icon">
+                            <i className="far fa-trash-alt"></i>
+                            <span>delete</span>
+                        </button>
+                    </div>
                 </figure>
                 <div className="card-description">
                     <h2 className="card-title">Descubre la Barcelona Modernista de Noche</h2>
