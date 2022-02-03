@@ -2,6 +2,8 @@ import './Styles/App.css';
 import {useEffect, useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Card from "./components/Card";
+
 
 function App() {
 
@@ -43,6 +45,26 @@ function App() {
                 {experiences.map(experience => <li>{experience.name}</li>)}
             </ul>
             <Footer />
+
+            <main className="container">
+                <div className="page-title">
+                    <h1 className="h1">Experiences</h1>
+                    <div className="align-right">
+                        <select name="" id="">
+                            <option value="">adas</option>
+                            <option value="">sdad</option>
+                        </select>
+                    </div>
+                </div>
+
+                <section className="card-grid">
+                    <Card />
+                    <Card />
+                    <Card />
+                </section>
+
+
+            </main>
         </div>
     );
 }
