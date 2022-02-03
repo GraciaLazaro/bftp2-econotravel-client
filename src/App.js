@@ -30,6 +30,8 @@ function App() {
             }
         ).then(_ => setRequiresUpdate(true))
 
+        console.log(experienceName);
+
     }
 
 

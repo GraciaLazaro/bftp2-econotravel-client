@@ -12,9 +12,9 @@ function Footer(){
                 <button><a href="/">ADMINISTRATOR</a></button>
                 <div className="follow-us">
                     <p>Follow us on</p>
-                    <span class="mx-2"><i class="fab fa-facebook"/></span>
+                    <span className="mx-2"><i className="fab fa-facebook"/></span>
                     <span className="mx-2"><i className="fab fa-youtube"/></span>
-                    <span class="mx-2"><i className="fab fa-instagram"/></span>
+                    <span className="mx-2"><i className="fab fa-instagram"/></span>
 
                 </div>
             </div>
