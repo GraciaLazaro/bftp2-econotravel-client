@@ -1,6 +1,7 @@
 import './Styles/App.css';
 import {useEffect, useState} from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
             <ul>
                 {experiences.map(experience => <li>{experience.name}</li>)}
             </ul>
+            <Footer />
         </div>
     );
 }
