@@ -1,0 +1,50 @@
+form{
+    background-color: #ffffff;
+    padding: 2rem;
+    width: 85%;
+    margin: auto;
+}
+form > section{
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.form-aside, .form-main{
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    width: 50%;
+}
+
+.form-img{
+    position: relative;
+}
+.form-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-group-row div{
+    width: 30%;
+}
+
+.input-group-row select, .input-group-row input{
+    width: 100%;
+}
+
+.btn-modal{
+    width: 50%;
+}
