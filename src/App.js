@@ -21,19 +21,15 @@ function App() {
         }
     }, [requiresUpdate])
 
-    const addExperience = (experienceName, experiencePrice, experienceDuration ) => {
+    const addExperience = (experience) => {
         fetch("http://localhost:8080/api/experiences",
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(
-                    {name: experienceName,
-                    price: experiencePrice,
-                    duration: experienceDuration})
+                body: JSON.stringify(experience)
             }
         ).then(_ => setRequiresUpdate(true))
 
-        console.log(experienceName);
 
     }
 
@@ -66,7 +62,7 @@ function App() {
 
 
             </main>
-            <Form />
+            <Form onSubmit={e => addExperience(e)}/>
             <Footer />
         </div>
     );
