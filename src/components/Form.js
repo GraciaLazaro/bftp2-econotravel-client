@@ -21,7 +21,7 @@ function Form(props) {
     const enviarDatos = (event) => {
         event.preventDefault()
         props.onSubmit(experienceData)
-
+        props.onClose()
 
     }
 
@@ -35,7 +35,7 @@ function Form(props) {
                <div className="page-title">
                    <h1 className="h1">Edit Experience</h1>
                    <div className="align-right">
-                       <button className="btn btn-icon" onClick={props.onClose}>
+                       <button type="button" className="btn btn-icon" onClick={props.onClose}>
                            <i className="far fa-times-circle gray"/>
                        </button>
                    </div>
@@ -46,7 +46,7 @@ function Form(props) {
                             <figure className="form-img">
                                 <img className="image" src={modernista} alt="photo"/>
                                 <div className="hover-layer">
-                                    <button className="btn btn-icon">
+                                    <button type="button" className="btn btn-icon">
                                         <i className="far fa-edit"/>
                                         <span>edit</span>
                                     </button>
@@ -90,7 +90,7 @@ function Form(props) {
                         </section>
                         <section className="form-buttons">
                             <button type="submit" className="btn btn-primary btn-modal"
-                                    onClick={props.onClose} data-toggle="" data-target="">Save Changes
+                                    data-toggle="" data-target="">Save Changes
                             </button>
                         </section>
                     </form>
