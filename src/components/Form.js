@@ -3,7 +3,7 @@ import "../Styles/App.css";
 import "../Styles/Form.css";
 import modernista from "../Assets/Modernista.png";
 
-function Form(props){
+function Form(props) {
 
     const [experienceData, setExperienceData] = useState({
         name: '',
@@ -14,13 +14,13 @@ function Form(props){
         console.log(event.target.value)
         setExperienceData({
             ...experienceData,
-            [event.target.name] : event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
     const enviarDatos = (event) => {
         event.preventDefault()
-         props.onSubmit(experienceData)
+        props.onSubmit(experienceData)
 
     }
 
@@ -49,46 +49,51 @@ function Form(props){
                             </figure>
                             <div className="form-tags">
 
+                                </div>
                             </div>
-                        </div>
-                        <div className="form-main">
-                            <div className="input-group">
-                                <label htmlFor="">Experience Name</label>
-                                <input onChange={handleInputChange} type="text" id="" name="name" className="form-title"/>
-                            </div>
+                            <div className="form-main">
+                                <div className="input-group">
+                                    <label htmlFor="">Experience Name</label>
+                                    <input onChange={handleInputChange} type="text" id="" name="name"
+                                           className="form-title"/>
+                                </div>
 
-                            <div className="input-group">
-                                <label htmlFor="">Experience Description</label>
-                                <textarea name="" id="" cols="30" rows="5" className="form-description"/>
-                            </div>
-                            <div className="input-group-row">
-                                <div>
-                                    <label htmlFor="">Price</label>
-                                    <input onChange={handleInputChange} type="text" name="price" className="form-price"/>
+                                <div className="input-group">
+                                    <label htmlFor="">Experience Description</label>
+                                    <textarea name="" id="" cols="30" rows="5" className="form-description"/>
                                 </div>
-                                <div>
-                                    <label htmlFor="">Duration</label>
-                                    <select id="" className="form-duration"/>
+                                <div className="input-group-row">
+                                    <div>
+                                        <label htmlFor="">Price</label>
+                                        <input onChange={handleInputChange} type="text" name="price"
+                                               className="form-price"/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="">Duration</label>
+                                        <select id="" className="form-duration"/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="">Accessibility</label>
+                                        <select name="" id="" className="form-acces"/>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label htmlFor="">Accessibility</label>
-                                    <select name="" id="" className="form-acces"/>
+                                <div className="input-group">
+                                    <label htmlFor="">Accessibility Details</label>
+                                    <textarea name="" id="" cols="30" rows="2" className="form-acces-detail"/>
                                 </div>
                             </div>
-                            <div className="input-group">
-                                <label htmlFor="">Accessibility Details</label>
-                                <textarea name="" id="" cols="30" rows="2" className="form-acces-detail"/>
-                            </div>
-                         </div>
-                    </section>
-                    <section className="form-buttons">
-                        <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">Save Changes</button>
-                    </section>
-                </form>
-           </div>
-       </div>
-);
+                        </section>
+                        <section className="form-buttons">
+                            <button type="submit" className="btn btn-primary btn-modal"
+                                    data-toggle="" data-target="">Save Changes
+                            </button>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        );
 
-}
+    }
+
 
 export default Form

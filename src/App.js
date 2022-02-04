@@ -31,7 +31,6 @@ function App() {
             }
         ).then(_ => setRequiresUpdate(true))
 
-
     }
 
     return (
@@ -65,8 +64,7 @@ function App() {
             </main>
 
             <Form onSubmit={e => addExperience(e)}/>
-            {/*{ showForm && <Form />} // short circuit*/}
-
+            {/*{ showForm && <Form />}*/}
             <Footer />
         </div>
     );
