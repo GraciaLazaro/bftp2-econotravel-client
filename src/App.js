@@ -54,7 +54,7 @@ function App() {
                     <h1 className="h1">Experiences</h1>
                     <div className="align-right">
                         <select name="" id="">
-                            <option value="">adas</option>
+                            <option value="">All experiences</option>
                             <option value="">sdad</option>
                         </select>
                     </div>
