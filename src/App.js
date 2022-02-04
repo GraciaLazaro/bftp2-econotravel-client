@@ -10,6 +10,7 @@ function App() {
     const [experiences, setExperiences] = useState([]);
     const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
+    const [showForm, setShowForm] = useState(false);
 
 
     useEffect(() => {
@@ -62,7 +63,10 @@ function App() {
 
 
             </main>
+
             <Form onSubmit={e => addExperience(e)}/>
+            {/*{ showForm && <Form />} // short circuit*/}
+
             <Footer />
         </div>
     );
