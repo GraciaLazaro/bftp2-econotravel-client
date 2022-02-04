@@ -19,7 +19,7 @@ function Card({experience}){
                     </button>
                         <button className="btn btn-icon">
                             <i className="far fa-edit"/>
-                            <span>edit</span>
+                            <span>Edit</span>
                         </button>
                         <button className="btn btn-icon">
                             <i  className="far fa-trash-alt"/>

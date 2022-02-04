@@ -22,15 +22,20 @@ function Form(props) {
         event.preventDefault()
         props.onSubmit(experienceData)
 
+
     }
 
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return(
-       <div className="hover-layer fixed-position">
+       <div className="hover-layer fixed-position" show={show} onHide={handleClose}>
            <div className="form-bg">
                <div className="page-title">
                    <h1 className="h1">Edit Experience</h1>
                    <div className="align-right">
-                       <button className="btn btn-icon">
+                       <button className="btn btn-icon" onClick={props.onClose}>
                            <i className="far fa-times-circle gray"/>
                        </button>
                    </div>
@@ -85,7 +90,7 @@ function Form(props) {
                         </section>
                         <section className="form-buttons">
                             <button type="submit" className="btn btn-primary btn-modal"
-                                    data-toggle="" data-target="">Save Changes
+                                    onClick={props.onClose} data-toggle="" data-target="">Save Changes
                             </button>
                         </section>
                     </form>
