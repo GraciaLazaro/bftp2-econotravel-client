@@ -37,15 +37,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <div className="newExperienceForm">
-                <input onChange={e => setNewExperience(e.target.value)} type="text"/>
-                <button onClick={() => addExperience(newExperience)}>Add experience</button>
-            </div>
-
-            <ul>
-
-            </ul>
-
+            <button onClick={()=>setShowForm(true)}>Add</button>
             <main className="container">
                 <div className="page-title">
                     <h1 className="h1">Experiences</h1>
@@ -63,10 +55,7 @@ function App() {
 
 
             </main>
-
-            <Form onSubmit={e => addExperience(e)}/>
-            {/*{ showForm && <Form />} // short circuit*/}
-
+            { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Footer />
         </div>
     );
