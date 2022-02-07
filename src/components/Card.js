@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from 'react';
 import "../Styles/App.css";
 import "../Styles/CardStyle.css";
 import modernista from "../Assets/Modernista.png";
@@ -6,12 +7,16 @@ import App from '../App.js';
 
 function Card({experience}){
 
-
+    const [isShown, setIsShown] = useState(false);
 
     return(
-            <div className="card-container">
+            <div className="card-container"
+                 onMouseEnter={() => setIsShown(true)}
+                 onMouseLeave={() => setIsShown(false)}>
                 <figure>
                     <img className="image" src={modernista} alt="photo"/>
+
+                    {isShown && (
                     <div className="hover-layer">
                     <button className="btn btn-icon">
                         <i className="far fa-eye"/>
@@ -26,6 +31,8 @@ function Card({experience}){
                             <span>delete</span>
                         </button>
                     </div>
+                    )}
+
                 </figure>
                 <div className="card-description">
                    <h2 className="card-title"> {experience.name}</h2>

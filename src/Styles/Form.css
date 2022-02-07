@@ -1,5 +1,5 @@
 .form-bg{
-    background-color: #ffffff;
+    background-color: #edebe8;
     padding: 1%;
     width: 85%;
     height: 90vh;
@@ -32,13 +32,14 @@ form > section{
 .form-aside, .form-main{
     display: flex;
     flex-direction: column;
-    padding: 1.4rem;
+    padding: 2%;
     width: 50%;
 }
 
 .form-buttons{
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .input-group{
@@ -67,14 +68,16 @@ form > section{
 .btn-modal{
     width: 50%;
 }
-
-.page-title{
-    padding: 30px 15px 20px 15px;
+.btn-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
 }
-.page-title h1 {
+
+.hover-layer > .form-bg > .page-header{
+    padding: 25px 15px 20px 15px;
+}
+.hover-layer > .form-bg > .page-title h1 {
     margin: 0;
-}
-
-.page-title > div > button{
-    margin: -35px -22px;
 }

@@ -3,14 +3,15 @@ import {useEffect, useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
-import Form from "./components/Form";
+import Filters from "./components/Filters";
+import PageHeader from "./components/PagesHeader";
 
 function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
-    const [showForm, setShowForm] = useState(false);
+
 
 
     useEffect(() => {
@@ -36,26 +37,15 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <button onClick={()=>setShowForm(true)}>Add</button>
             <main className="container">
-                <div className="page-title">
-                    <h1 className="h1">Experiences</h1>
-                    <div className="align-right">
-                        <select name="" id="">
-                            <option value="">All experiences</option>
-                            <option value="">sdad</option>
-                        </select>
-                    </div>
-                </div>
-
-                <section className="card-grid">
+                <section className="page-header">
+                    <PageHeader />
+                    <Filters />
+                </section>
+                <section className="page-content card-grid">
                     {experiences.map(experience => <Card experience={experience}  />)}
                 </section>
-
-
             </main>
-
-            { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
 
             <Footer />
         </div>

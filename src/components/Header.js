@@ -1,8 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
+import Form from "./Form";
 
 function Header(){
+    const [requiresUpdate, setRequiresUpdate] = useState(true);
+    const addExperience = (experience) => {
+        fetch("http://localhost:8080/api/experiences",
+            {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(experience)
+            }
+        ).then(_ => setRequiresUpdate(true))
+
+    }
+    const [showForm, setShowForm] = useState(false);
     return(
       <header className="header">
           <div className="container">
@@ -16,9 +29,12 @@ function Header(){
                        </li>
                        <li className="link"><a>About Us</a></li>
                        <li className="link"><a>Enquire</a></li>
+                       <li className="link" onClick={()=>setShowForm(true)}>Add Experience</li>
                    </ul>
               </nav>
           </div>
+
+          { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
       </header>
     );
 }
