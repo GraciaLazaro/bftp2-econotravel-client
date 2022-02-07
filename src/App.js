@@ -5,12 +5,15 @@ import Footer from "./components/Footer";
 import Card from "./components/Card";
 import Filters from "./components/Filters";
 import PageHeader from "./components/PagesHeader";
+import Form from "./components/Form";
 
 function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
+    const [showForm, setShowForm] = useState(false);
+
 
 
 
@@ -36,7 +39,7 @@ function App() {
 
     return (
         <div className="App">
-            <Header />
+            <Header onButtonClicked={() => setShowForm(true)} />
             <main className="container">
                 <section className="page-header">
                     <PageHeader />
@@ -46,7 +49,7 @@ function App() {
                     {experiences.map(experience => <Card experience={experience}  />)}
                 </section>
             </main>
-
+            { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Footer />
         </div>
     );
