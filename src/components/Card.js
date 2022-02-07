@@ -5,9 +5,11 @@ import "../Styles/CardStyle.css";
 import modernista from "../Assets/Modernista.png";
 import App from '../App.js';
 
-function Card({experience}){
+function Card({experience, onExperienceDelete}, props){
 
     const [isShown, setIsShown] = useState(false);
+
+
 
     return(
             <div className="card-container"
@@ -26,16 +28,16 @@ function Card({experience}){
                             <i className="far fa-edit"/>
                             <span>Edit</span>
                         </button>
-                        <button className="btn btn-icon">
+                        <button onClick={onExperienceDelete} className="btn btn-icon">
                             <i  className="far fa-trash-alt"/>
-                            <span>delete</span>
+                            <span >delete</span>
                         </button>
                     </div>
                     )}
 
                 </figure>
                 <div className="card-description">
-                   <h2 className="card-title"> {experience.name}</h2>
+                   <h2 className="card-title">{experience.name}</h2>
                     <p className="card-price">{experience.price + '€'}</p>
                     <p className="card-price-detail">por persona</p>
                     <p>{experience.duration}</p>

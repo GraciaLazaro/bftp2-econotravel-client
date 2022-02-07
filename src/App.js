@@ -15,8 +15,6 @@ function App() {
     const [showForm, setShowForm] = useState(false);
 
 
-
-
     useEffect(() => {
         if (requiresUpdate) {
             fetch("http://localhost:8080/api/experiences")
@@ -25,6 +23,15 @@ function App() {
                 .then(_ => setRequiresUpdate(false));
         }
     }, [requiresUpdate])
+
+    const deleteExperience = (id) => {
+        fetch(`http://localhost:8080/api/experiences/delete/${id}`,
+            {
+                method: 'GET'
+            }
+        ).then(_ => setRequiresUpdate(true))
+
+    }
 
     const addExperience = (experience) => {
         fetch("http://localhost:8080/api/experiences",
@@ -37,6 +44,9 @@ function App() {
 
     }
 
+
+
+
     return (
         <div className="App">
             <Header onButtonClicked={() => setShowForm(true)} />
@@ -46,7 +56,7 @@ function App() {
                     <Filters />
                 </section>
                 <section className="page-content card-grid">
-                    {experiences.map(experience => <Card experience={experience}  />)}
+                    {experiences.map(experience => <Card experience={experience} key={experience.id} onExperienceDelete={ () => deleteExperience(experience.id)} />)}
                 </section>
             </main>
             { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
