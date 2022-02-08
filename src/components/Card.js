@@ -30,7 +30,7 @@ function Card({experience, onExperienceDelete}, props){
                         </button>
                         <button onClick={onExperienceDelete} className="btn btn-icon">
                             <i  className="far fa-trash-alt"/>
-                            <span >delete</span>
+                            <span >Delete</span>
                         </button>
                     </div>
                     )}
