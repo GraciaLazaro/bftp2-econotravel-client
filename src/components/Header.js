@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
 import Form from "./Form";
+import {Link} from "react-router-dom";
 
 function Header(props){
 
@@ -14,10 +15,10 @@ function Header(props){
               <nav>
                    <ul className="main-nav">
                        <li className="link link-active">
-                           <a>Home</a>
+                           <Link to="/">Home</Link>
                        </li>
-                       <li className="link"><a>About Us</a></li>
-                       <li className="link"><a>Enquire</a></li>
+                       <li className="link"><Link to="/AboutUs">About Us</Link></li>
+                       <li className="link"><Link to="/Enquires">Enquires</Link></li>
                        <li className="link" onClick={props.onButtonClicked}>Add Experience</li>
                    </ul>
               </nav>
