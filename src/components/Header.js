@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
-import Form from "./Form";
-import {Link} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 function Header(props){
 
@@ -13,12 +12,12 @@ function Header(props){
                   <img className="logo" src={logo}/>
               </div>
               <nav>
-                   <ul className="main-nav">
-                       <li><Link className="link link-active" to="/">Home</Link></li>
-                       <li><Link className="link" to="/AboutUs">About Us</Link></li>
-                       <li><Link className="link" to="/Enquires">Enquires</Link></li>
-                       <li className="link" onClick={props.onButtonClicked}>Add Experience</li>
-                   </ul>
+                  <Routes className="main-nav">
+                       <Route className="link link-active" path="*">Home</Route>
+                       <Route className="link" path="/about-us">About Us</Route>
+                       <Route className="link" path="/enquires">Enquires</Route>
+                       <Route className="link" onClick={props.onButtonClicked}>Add Experience</Route>
+                   </Routes>
               </nav>
           </div>
 
