@@ -3,13 +3,11 @@ import { useState } from 'react';
 import "../Styles/App.css";
 import "../Styles/CardStyle.css";
 import modernista from "../Assets/Modernista.png";
-import App from '../App.js';
 
-function Card({experience, onExperienceDelete}, props){
+
+function Card({experience, onExperienceDelete}){
 
     const [isShown, setIsShown] = useState(false);
-
-
 
     return(
             <div className="card-container"
