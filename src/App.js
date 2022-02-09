@@ -2,11 +2,11 @@ import './Styles/App.css';
 import React, {useEffect, useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Card from "./components/Card";
-import Filters from "./components/Filters";
-import PageHeader from "./components/PagesHeader";
+import Home from "./components/Home";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import AboutUs from "./components/AboutUs";
+import Enquires from "./components/Enquires";
 import Form from "./components/Form";
-
 
 function App() {
 
@@ -14,7 +14,6 @@ function App() {
     const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
-
 
     useEffect(() => {
         if (requiresUpdate) {
@@ -46,28 +45,16 @@ function App() {
     }
 
     return (
-
-            <div className="App">
-
-                <Header onButtonClicked={() => setShowForm(true)}/>
-
-                <main className="container">
-                    <section className="page-header">
-                        <PageHeader/>
-                        <Filters/>
-                    </section>
-                    <section className="page-content card-grid">
-                        {experiences.map(experience => <Card experience={experience} key={experience.id}
-                                                             onExperienceDelete={() => deleteExperience(experience.id)}/>)}
-                    </section>
-                </main>
-                {showForm && <Form onSubmit={e => addExperience(e)} onClose={() => setShowForm(false)}/>}
-                <Footer/>
-
-
-
-            </div>
-
+        <BrowserRouter>
+            <Header onButtonClicked={() => setShowForm(true)} />
+            { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
+            <Routes>
+                <Route index element={<Home experiences={experiences} deleteExperience={deleteExperience} />}/>
+                <Route path="/AboutUs" element={<AboutUs />} />
+                <Route path="/Enquires" element={<Enquires />} />
+            </Routes>
+            <Footer />
+        </BrowserRouter>
     );
 }
 
