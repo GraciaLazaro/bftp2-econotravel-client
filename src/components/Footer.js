@@ -6,7 +6,7 @@ function Footer(){
         <footer className="footer">
         <div className="container">
             <div className="copyright">
-                <p>EconoTravel 2022 © Todos los derechos resevados</p>
+                <p>EconoTravel 2022 © Todos los derechos reservados</p>
             </div>
             <div className="admin-icons">
                 <button><a href="/">ADMINISTRATOR</a></button>

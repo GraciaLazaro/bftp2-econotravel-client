@@ -21,27 +21,6 @@ body{
     width: 100%;
 }
 
-.link{
-    transition: background-color .3s ease-out;
-}
-.link:hover{
-    background-color: #F9F8F6;
-    border-radius: 20px;
-    color: #4C8055;
-    cursor: pointer;
-}
-
-.link-active a{
-    color: #4C8055!important;
-    border-bottom: solid 2px #4C8055;
-}
-
-.link-active:hover{
-    background-color:initial;
-    cursor: initial;
-
-}
-
 .align-right{
     margin-left: auto;
 }
@@ -105,8 +84,15 @@ option{
     padding: 0.5rem 3rem;
     text-transform: uppercase;
     font-weight: 600;
-
 }
+.btn:hover{cursor: pointer;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow:0 0 0 0.2rem rgba(86, 86, 86, 0.01);
+}
+
 .btn-primary{
     background-color: #4C8055;
     color: #ffffff;
@@ -116,6 +102,20 @@ option{
 .btn-primary:hover{
     background-color: #2f5933;
     color: #ffffff;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle
+{
+    color: #fff;
+    background-color: #2f5933;
+    border-color: inherit;
+    box-shadow: 0 0 0 0.25rem rgba(86, 86, 86, 0.1)!important;
+}
+.btn-filters:not(:disabled):not(.disabled).active, .btn-filters:not(:disabled):not(.disabled):active, .show>.btn-filters.dropdown-toggle
+{
+    background-color: #ffffff;
+    border-color: inherit;
+    box-shadow: 0 0 0 0.2rem rgba(86, 86, 86, 0.05)!important;
 }
 
 .btn-icon{

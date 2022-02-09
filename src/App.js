@@ -1,11 +1,12 @@
 import './Styles/App.css';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 import Filters from "./components/Filters";
 import PageHeader from "./components/PagesHeader";
 import Form from "./components/Form";
+
 
 function App() {
 
@@ -44,24 +45,29 @@ function App() {
 
     }
 
-
-
-
     return (
-        <div className="App">
-            <Header onButtonClicked={() => setShowForm(true)} />
-            <main className="container">
-                <section className="page-header">
-                    <PageHeader />
-                    <Filters />
-                </section>
-                <section className="page-content card-grid">
-                    {experiences.map(experience => <Card experience={experience} key={experience.id} onExperienceDelete={ () => deleteExperience(experience.id)} />)}
-                </section>
-            </main>
-            { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
-            <Footer />
-        </div>
+
+            <div className="App">
+
+                <Header onButtonClicked={() => setShowForm(true)}/>
+
+                <main className="container">
+                    <section className="page-header">
+                        <PageHeader/>
+                        <Filters/>
+                    </section>
+                    <section className="page-content card-grid">
+                        {experiences.map(experience => <Card experience={experience} key={experience.id}
+                                                             onExperienceDelete={() => deleteExperience(experience.id)}/>)}
+                    </section>
+                </main>
+                {showForm && <Form onSubmit={e => addExperience(e)} onClose={() => setShowForm(false)}/>}
+                <Footer/>
+
+
+
+            </div>
+
     );
 }
 

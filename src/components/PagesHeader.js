@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "../Styles/App.css";
 import "../Styles/PageHeaderStyle.css";
 import "../Styles/FiltersStyle.css";
@@ -8,7 +8,7 @@ function PageHeader(props){
         <div className="page-name">
             <h1 className="h1">Experiences</h1>
             <div className="align-right">
-                <button className="btn btn-filters">
+                <button className="btn btn-filters"  >
                     Select Filters
                 </button>
             </div>
