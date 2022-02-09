@@ -28,8 +28,39 @@ nav ul{
     display: flex;
     align-items: center;
 }
-nav ul li{
-    padding: 15px 28px;
+
+.link{
+    transition: background-color .3s ease-out;
+    padding: 12px 28px;
     text-transform: uppercase;
     font-weight: 600;
+    color: #1f1d1d;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: #F9F8F6;
+    border-radius: 20px;
+    color: #4C8055;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-active{
+    position: relative;
+    color: #4C8055!important;
+}
+
+.link-active:after {
+    content: '';
+    width: calc(100% - 56px);
+    position: absolute;
+    left: 28px;
+    bottom: 10px;
+    border-width: 0 0 2px;
+    border-style: solid;
+}
+
+.link-active:hover{
+    background-color:initial;
+    cursor: initial;
 }

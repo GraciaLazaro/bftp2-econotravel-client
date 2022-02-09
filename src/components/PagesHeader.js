@@ -8,7 +8,7 @@ function PageHeader(props){
         <div className="page-name">
             <h1 className="h1">Experiences</h1>
             <div className="align-right">
-                <button className="btn btn-filters">
+                <button className="btn btn-filters"  >
                     Select Filters
                 </button>
             </div>

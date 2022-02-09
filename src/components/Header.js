@@ -14,11 +14,9 @@ function Header(props){
               </div>
               <nav>
                    <ul className="main-nav">
-                       <li className="link link-active">
-                           <Link to="/">Home</Link>
-                       </li>
-                       <li className="link"><Link to="/AboutUs">About Us</Link></li>
-                       <li className="link"><Link to="/Enquires">Enquires</Link></li>
+                       <li><Link className="link link-active" to="/">Home</Link></li>
+                       <li><Link className="link" to="/AboutUs">About Us</Link></li>
+                       <li><Link className="link" to="/Enquires">Enquires</Link></li>
                        <li className="link" onClick={props.onButtonClicked}>Add Experience</li>
                    </ul>
               </nav>

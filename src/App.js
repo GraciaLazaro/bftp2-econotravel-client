@@ -6,9 +6,6 @@ import Card from "./components/Card";
 import Filters from "./components/Filters";
 import PageHeader from "./components/PagesHeader";
 import Form from "./components/Form";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import AboutUs from "./components/AboutUs";
-import Enquires from "./components/Enquires";
 
 function App() {
 
