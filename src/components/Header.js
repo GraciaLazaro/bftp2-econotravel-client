@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
-import Form from "./Form";
 
 function Header(props){
 
