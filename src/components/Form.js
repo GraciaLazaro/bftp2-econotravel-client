@@ -5,7 +5,7 @@ import modernista from "../Assets/Modernista.png";
 
 function Form(props) {
 
-    const [experienceData, setExperienceData] = useState({
+    const [experienceData, setExperienceData] = useState(props.experienceData||{
         name: '',
         price: ''
     })
@@ -55,7 +55,7 @@ function Form(props) {
                         <div className="form-main">
                             <div className="input-group">
                                 <label htmlFor="">Experience Name</label>
-                                <input onChange={handleInputChange} type="text" id="" name="name" className="form-title"/>
+                                <input value={experienceData.name} onChange={handleInputChange} type="text" id="" name="name" className="form-title"/>
                             </div>
 
                             <div className="input-group">
@@ -65,7 +65,7 @@ function Form(props) {
                             <div className="input-group-row">
                                 <div>
                                     <label htmlFor="">Price</label>
-                                    <input onChange={handleInputChange} type="text" name="price" className="form-price"/>
+                                    <input value={experienceData.price} onChange={handleInputChange} type="text" name="price" className="form-price"/>
                                 </div>
                                 <div>
                                     <label htmlFor="">Duration</label>

@@ -14,6 +14,7 @@ function App() {
     const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
+    const [isEditing, setEditing] = useState(false);
 
     useEffect(() => {
         if (requiresUpdate) {
@@ -49,7 +50,7 @@ function App() {
             <Header onButtonClicked={() => setShowForm(true)} />
             { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Routes>
-                <Route path="/" index element={<Home experiences={experiences} deleteExperience={deleteExperience} />}/>
+                <Route path="/" index element={<Home experiences={experiences} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
                 <Route path="/AboutUs" element={<AboutUs />} />
                 <Route path="/Enquires" element={<Enquires />} />
                 <Route path="*" element={<Navigate replace to="/"/>} />
