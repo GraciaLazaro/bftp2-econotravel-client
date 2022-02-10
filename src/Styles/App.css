@@ -7,7 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    width: 100vw;
+    overflow-x: hidden;
+}
 
 body{
     background-color: #EBE7E0;
@@ -15,14 +18,23 @@ body{
     box-sizing: border-box;
 }
 
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .container{
     max-width: 1220px;
     margin: auto;
     width: 100%;
 }
 
+main{flex: 1;}
+
 .align-right{
-    margin-left: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 input, select, .input, textarea{

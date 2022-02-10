@@ -45,22 +45,22 @@ nav ul{
     text-decoration: none;
 }
 
-.link-active{
+a.active{
     position: relative;
     color: #4C8055!important;
 }
 
-.link-active:after {
+a.active:after {
     content: '';
     width: calc(100% - 56px);
     position: absolute;
     left: 28px;
-    bottom: 10px;
+    bottom: 7px;
     border-width: 0 0 2px;
     border-style: solid;
 }
 
-.link-active:hover{
+a.active:hover{
     background-color:initial;
     cursor: initial;
 }

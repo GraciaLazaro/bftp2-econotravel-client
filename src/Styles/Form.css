@@ -76,6 +76,7 @@ form > section{
 }
 
 .hover-layer > .form-bg > .page-header{
+    margin-top: 0;
     padding: 25px 15px 20px 15px;
 }
 .hover-layer > .form-bg > .page-title h1 {

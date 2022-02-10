@@ -1,9 +1,9 @@
-
-
 function AboutUs() {
 
     return (
-        <p>Hola</p>
+        <main className="container">
+            <p>Hola</p>
+        </main>
     )
 }
 

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
-import Form from "./Form";
-import {Link} from "react-router-dom";
+
+import {NavLink as Link} from "react-router-dom"
 
 function Header(props){
 
@@ -14,9 +14,9 @@ function Header(props){
               </div>
               <nav>
                    <ul className="main-nav">
-                       <li><Link className="link link-active" to="/">Home</Link></li>
-                       <li><Link className="link" to="/AboutUs">About Us</Link></li>
-                       <li><Link className="link" to="/Enquires">Enquires</Link></li>
+                       <li><Link activeclassname="active" className="link" to="/">Home</Link></li>
+                       <li><Link activeclassname="active" className="link" to="/AboutUs">About Us</Link></li>
+                       <li><Link activeclassname="active" className="link" to="/Enquires">Enquires</Link></li>
                        <li className="link" onClick={props.onButtonClicked}>Add Experience</li>
                    </ul>
               </nav>

@@ -1,9 +1,9 @@
-
-
 function Enquires() {
 
     return (
-        <p>Chao</p>
+        <main className="container">
+            <p>Chau</p>
+        </main>
     )
 }
 
