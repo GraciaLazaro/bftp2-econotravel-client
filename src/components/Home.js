@@ -7,7 +7,7 @@ import {useState} from "react";
 
 function Home({experiences, deleteExperience, editExperience}) {
     const [showForm, setShowForm] = useState(false);
-    const [experienceToEdit, setExperienceToEdit] = useState({name: "hola", price: 50})
+    const [experienceToEdit, setExperienceToEdit] = useState({name: "hola", price: 50, image:"img"})
     return (
         <main className="container">
             <PageHeader/>
