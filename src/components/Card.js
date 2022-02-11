@@ -5,6 +5,7 @@ import "../Styles/CardStyle.css";
 import modernista from "../Assets/Modernista.png";
 
 
+
 function Card({experience, onExperienceDelete, onExperienceEdit}){
 
     const [isShown, setIsShown] = useState(false);
@@ -14,7 +15,7 @@ function Card({experience, onExperienceDelete, onExperienceEdit}){
                  onMouseEnter={() => setIsShown(true)}
                  onMouseLeave={() => setIsShown(false)}>
                 <figure>
-                    <img className="image" src={modernista} alt="photo"/>
+                    <img className="image" src={experience.image} alt="photo"/>
 
                     {isShown && (
                     <div className="hover-layer">
