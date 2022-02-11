@@ -30,8 +30,7 @@ function Form(props) {
            <div className="form-bg">
                <section className="page-header">
                    <div className="page-name">
-                       {props.experienceData ?
-                           (<h1 className="h1">Editar experiencia</h1>) : (<h1 className="h1">Nueva experiencia</h1>)}
+                    <h1 className="h1">{props.experienceData ? 'Editar experiencia' : 'Nueva experiencia' }</h1>
                    </div>
                    <button type="button" className="btn btn-close" onClick={props.onClose}>
                        <i className="far fa-times-circle gray"/>
@@ -86,8 +85,9 @@ function Form(props) {
                         </div>
                     </section>
                     <section className="form-buttons">
-                        {props.experienceData ?
-                            (<button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">Guardar cambios</button>) : (<button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">Guardar</button>)}
+                        <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">
+                                {props.experienceData ? 'Guardar cambios' : 'Guardar' }
+                            </button>
                     </section>
                 </form>
            </div>
