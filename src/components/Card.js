@@ -5,7 +5,7 @@ import "../Styles/CardStyle.css";
 import modernista from "../Assets/Modernista.png";
 
 
-function Card({experience, onExperienceDelete}){
+function Card({experience, onExperienceDelete, onExperienceEdit}){
 
     const [isShown, setIsShown] = useState(false);
 
@@ -22,7 +22,7 @@ function Card({experience, onExperienceDelete}){
                         <i className="far fa-eye"/>
                         <span>view more</span>
                     </button>
-                        <button className="btn btn-icon">
+                        <button onClick={onExperienceEdit} className="btn btn-icon">
                             <i className="far fa-edit"/>
                             <span>Edit</span>
                         </button>

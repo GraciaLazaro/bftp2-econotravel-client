@@ -11,10 +11,8 @@ import Form from "./components/Form";
 function App() {
 
     const [experiences, setExperiences] = useState([]);
-    const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
-    const [isEditing, setEditing] = useState(false);
 
     useEffect(() => {
         if (requiresUpdate) {
