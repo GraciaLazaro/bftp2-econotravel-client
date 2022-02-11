@@ -30,7 +30,13 @@ function Form(props) {
            <div className="form-bg">
                <section className="page-header">
                    <div className="page-name">
-                       <h1 className="h1">Add New Experience</h1>
+                       {props.experienceData ? (
+                           <h1 className="h1">Edit Experience</h1>
+                       ) : (
+                           <h1 className="h1">Add New Experience</h1>
+                       )
+                       }
+
                    </div>
                    <button type="button" className="btn btn-close" onClick={props.onClose}>
                        <i className="far fa-times-circle gray"/>
