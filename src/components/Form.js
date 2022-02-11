@@ -31,7 +31,7 @@ function Form(props) {
                <section className="page-header">
                    <div className="page-name">
                        {props.experienceData ?
-                           (<h1 className="h1">Edit Experience</h1>) : (<h1 className="h1">Add New Experience</h1>)}
+                           (<h1 className="h1">Editar experiencia</h1>) : (<h1 className="h1">Nueva experiencia</h1>)}
                    </div>
                    <button type="button" className="btn btn-close" onClick={props.onClose}>
                        <i className="far fa-times-circle gray"/>
@@ -45,7 +45,7 @@ function Form(props) {
                                 <div className="hover-layer">
                                     <button type="button" className="btn btn-icon">
                                         <i className="far fa-edit"/>
-                                        <span>edit</span>
+                                        <span>editar</span>
                                     </button>
                                 </div>
                             </figure>
@@ -55,32 +55,32 @@ function Form(props) {
                         </div>
                         <div className="form-main">
                             <div className="input-group">
-                                <label htmlFor="">Experience Name</label>
+                                <label htmlFor="">Nombre de la experiencia</label>
                                 <input value={experienceData.name} onChange={handleInputChange} type="text" id="" name="name" className="form-title"/>
                             </div>
 
                             <div className="input-group">
-                                <label htmlFor="">Experience Description</label>
+                                <label htmlFor="">Descripción</label>
                                 <textarea name="" id="" cols="30" rows="5" className="form-description"/>
                             </div>
                             <div className="input-group-row">
                                 <div>
-                                    <label htmlFor="">Price</label>
+                                    <label htmlFor="">Precio</label>
                                     <input value={experienceData.price} onChange={handleInputChange} type="text" name="price" className="form-price"/>
                                 </div>
                                 <div>
-                                    <label htmlFor="">Duration</label>
+                                    <label htmlFor="">Duración</label>
                                     <select id="" className="form-duration">
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="">Accessibility</label>
+                                    <label htmlFor="">Accesibilidad</label>
                                     <select name="" id="" className="form-acces">
                                     </select>
                                 </div>
                             </div>
                             <div className="input-group">
-                                <label htmlFor="">Accessibility Details</label>
+                                <label htmlFor="">Detalles de accesibilidad</label>
                                 <textarea name="" id="" cols="30" rows="2" className="form-acces-detail"/>
                             </div>
                         </div>

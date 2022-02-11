@@ -13,7 +13,7 @@ function PageHeader(){
     return(
     <header className="page-header">
         <div className="page-name">
-            <h1 className="h1">Experiences</h1>
+            <h1 className="h1">Experiencias</h1>
         </div>
         {/*<button className="align-right btn btn-filters">Select Filters</button>*/}
         <button className="align-right btn btn-filters"
@@ -21,7 +21,7 @@ function PageHeader(){
                 onClick: () => setExpanded((prevExpanded) => !prevExpanded),
             })}
         >
-            {isExpanded ? 'Collapse Filters' : 'Expand Filters'}
+            {isExpanded ? 'Contraer filtros' : 'Expandir filtros'}
         </button>
         <section {...getCollapseProps()}>
             <Filters />

@@ -20,15 +20,15 @@ function Card({experience, onExperienceDelete, onExperienceEdit}){
                     <div className="hover-layer">
                     <button className="btn btn-icon">
                         <i className="far fa-eye"/>
-                        <span>view more</span>
+                        <span>ver más</span>
                     </button>
                         <button onClick={onExperienceEdit} className="btn btn-icon">
                             <i className="far fa-edit"/>
-                            <span>Edit</span>
+                            <span>Editar</span>
                         </button>
                         <button onClick={onExperienceDelete} className="btn btn-icon">
                             <i  className="far fa-trash-alt"/>
-                            <span >Delete</span>
+                            <span >Borrar</span>
                         </button>
                     </div>
                     )}
@@ -41,7 +41,7 @@ function Card({experience, onExperienceDelete, onExperienceEdit}){
                     <p>{experience.duration}</p>
                 </div>
                 <div className="card-buttons">
-                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Book Now</button>
+                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservar</button>
                 </div>
 
             </div>

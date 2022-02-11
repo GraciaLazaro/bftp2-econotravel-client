@@ -14,10 +14,10 @@ function Header(props){
               </div>
               <nav>
                    <ul className="main-nav">
-                       <li><Link activeclassname="active" className="link" to="/">Home</Link></li>
-                       <li><Link activeclassname="active" className="link" to="/AboutUs">About Us</Link></li>
-                       <li><Link activeclassname="active" className="link" to="/Enquires">Enquires</Link></li>
-                       <li className="link" onClick={props.onButtonClicked}>Add Experience</li>
+                       <li><Link activeclassname="active" className="link" to="/">Inicio</Link></li>
+                       <li><Link activeclassname="active" className="link" to="/AboutUs">Quiénes somos</Link></li>
+                       <li><Link activeclassname="active" className="link" to="/Enquires">Contacta</Link></li>
+                       <li className="link" onClick={props.onButtonClicked}>Añadir Experiencia</li>
                    </ul>
               </nav>
           </div>
