@@ -17,7 +17,6 @@ function Form(props) {
         duration: '',
         accessibility: '',
         accessibilityDescription: '',
-
     })
 
     const handleInputChange = (event) => {
@@ -75,30 +74,30 @@ function Form(props) {
                             </div>
 
                             <div className="input-group">
-                                <label htmlFor="">Descripción</label>
-                                <textarea value={experienceData.description} name="" id="" cols="30" rows="5" className="form-description"/>
+                                <label htmlFor="description">Descripción</label>
+                                <textarea value={experienceData.description} onChange={handleInputChange} name="description" id="description" cols="30" rows="5" className="form-description"/>
                             </div>
                             <div className="input-group-row">
                                 <div>
-                                    <label htmlFor="">Precio</label>
+                                    <label htmlFor="price">Precio</label>
                                     <input value={experienceData.price} onChange={handleInputChange} type="text"
                                            name="price" className="form-price"/>
                                 </div>
                                 <div>
-                                    <label htmlFor="">Duración</label>
-                                    <input value= {experienceData.duration} id="" className="form-duration"/>
+                                    <label htmlFor="duration">Duración</label>
+                                    <input value={experienceData.duration} onChange={handleInputChange} id="duration" name="duration" className="form-duration"/>
                                 </div>
                                 <div>
                                     <label htmlFor="">Accesibilidad</label>
-                                    <select name="" id="" className="form-acces">
+                                    <select onChange={handleInputChange} name="accessibility" id="accessibility" className="form-acces">
                                         <option value={experienceData.accessibility}> Yes </option>
                                         <option value={experienceData.accessibility}> No </option>
                                     </select>
                                 </div>
                             </div>
                             <div className="input-group">
-                                <label htmlFor="">Detalles de accesibilidad</label>
-                                <textarea value={experienceData.accessibilityDescription} name="" id="" cols="30" rows="2" className="form-acces-detail"/>
+                                <label htmlFor="accessibilityDescription">Detalles de accesibilidad</label>
+                                <textarea value={experienceData.accessibilityDescription}  onChange={handleInputChange} name="accessibilityDescription" id="accessibilityDescription" cols="30" rows="2" className="form-acces-detail"/>
                             </div>
                         </div>
                     </section>
