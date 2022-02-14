@@ -52,7 +52,7 @@ function Form(props) {
                             <figure className="form-img"
                                     onMouseEnter={() => setIsShown(true)}
                                     onMouseLeave={() => setIsShown(false)}>
-                                {props.experienceData ? <img className="image" src={experienceData.image} alt="photo"/>
+                                {props.experienceData.image ? <img className="image" src={experienceData.image} alt="photo"/>
                                     : <img className="image" src={defaultPhoto} alt="photo"/>}
                                 {isShown && (
                                     <div className="hover-layer">

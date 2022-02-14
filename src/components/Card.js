@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import "../Styles/App.css";
 import "../Styles/CardStyle.css";
-import modernista from "../Assets/Modernista.png";
+import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 
 
 
@@ -17,8 +17,8 @@ function Card({experience, onExperienceDelete, onExperienceEdit}){
                  onMouseEnter={() => setIsShown(true)}
                  onMouseLeave={() => setIsShown(false)}>
                 <figure>
-                    <img className="image" src={experience.image} alt="photo"/>
-
+                    {experience.image ? <img className="image" src={experience.image} alt="photo"/>
+                        : <img className="image" src={defaultPhoto} alt="photo"/>}
                     {isShown && (
                     <div className="hover-layer">
                     <button className="btn btn-icon">
