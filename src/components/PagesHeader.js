@@ -15,7 +15,7 @@ function PageHeader(){
         <div className="page-name">
             <h1 className="h1">Experiencias</h1>
         </div>
-{/*        <button className="align-right btn btn-filters"
+        <button className="align-right btn btn-filters"
             {...getToggleProps({
                 onClick: () => setExpanded((prevExpanded) => !prevExpanded),
             })}
@@ -24,7 +24,7 @@ function PageHeader(){
         </button>
         <section {...getCollapseProps()}>
             <Filters />
-        </section>*/}
+        </section>
     </header>
     );
 }

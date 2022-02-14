@@ -52,7 +52,8 @@ function Form(props) {
                             <figure className="form-img"
                                     onMouseEnter={() => setIsShown(true)}
                                     onMouseLeave={() => setIsShown(false)}>
-                                {props.experienceData.image ? <img className="image" src={experienceData.image} alt="photo"/>
+                                {props.experienceData ?
+                                    <img className="image" src={experienceData.image} alt="photo"/>
                                     : <img className="image" src={defaultPhoto} alt="photo"/>}
                                 {isShown && (
                                     <div className="hover-layer">
@@ -63,8 +64,9 @@ function Form(props) {
                                     </div>)}
                             </figure>
                             <div className="filters-row">
-
                             </div>
+                            <input placeholder="Añade URL de la imagen" value={experienceData.image} onChange={handleInputChange} type="text" id=""
+                                   name="image" className="form-img"/>
                         </div>
                         <div className="form-main">
                             <div className="input-group">
@@ -75,7 +77,9 @@ function Form(props) {
 
                             <div className="input-group">
                                 <label htmlFor="description">Descripción</label>
-                                <textarea value={experienceData.description} onChange={handleInputChange} name="description" id="description" cols="30" rows="5" className="form-description"/>
+                                <textarea value={experienceData.description} onChange={handleInputChange}
+                                          name="description" id="description" cols="30" rows="5"
+                                          className="form-description"/>
                             </div>
                             <div className="input-group-row">
                                 <div>
@@ -85,19 +89,23 @@ function Form(props) {
                                 </div>
                                 <div>
                                     <label htmlFor="duration">Duración</label>
-                                    <input value={experienceData.duration} onChange={handleInputChange} id="duration" name="duration" className="form-duration"/>
+                                    <input value={experienceData.duration} onChange={handleInputChange} id="duration"
+                                           name="duration" className="form-duration"/>
                                 </div>
                                 <div>
                                     <label htmlFor="">Accesibilidad</label>
-                                    <select onChange={handleInputChange} name="accessibility" id="accessibility" className="form-acces">
-                                        <option value={experienceData.accessibility}> Yes </option>
-                                        <option value={experienceData.accessibility}> No </option>
+                                    <select onChange={handleInputChange} name="accessibility" id="accessibility"
+                                            className="form-acces">
+                                        <option value={experienceData.accessibility}> Yes</option>
+                                        <option value={experienceData.accessibility}> No</option>
                                     </select>
                                 </div>
                             </div>
                             <div className="input-group">
                                 <label htmlFor="accessibilityDescription">Detalles de accesibilidad</label>
-                                <textarea value={experienceData.accessibilityDescription}  onChange={handleInputChange} name="accessibilityDescription" id="accessibilityDescription" cols="30" rows="2" className="form-acces-detail"/>
+                                <textarea value={experienceData.accessibilityDescription} onChange={handleInputChange}
+                                          name="accessibilityDescription" id="accessibilityDescription" cols="30"
+                                          rows="2" className="form-acces-detail"/>
                             </div>
                         </div>
                     </section>

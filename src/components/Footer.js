@@ -9,7 +9,7 @@ function Footer(){
                 <p>EconoTravel 2022 © Todos los derechos reservados</p>
             </div>
             <div className="admin-icons">
-                {/*<button><a href="/">Administrador</a></button>*/}
+                <button><a href="/">Administrador</a></button>
                 <div className="follow-us">
                     <p>Síguenos en</p>
                     <span className="mx-2"><i className="fab fa-facebook"/></span>
