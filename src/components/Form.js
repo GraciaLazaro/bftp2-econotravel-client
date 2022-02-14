@@ -2,9 +2,11 @@ import React, {useState} from "react";
 import "../Styles/App.css";
 import "../Styles/Form.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
+import {useNavigate} from "react-router-dom";
 
 function Form(props) {
 
+    const navigate = useNavigate();
     const [isShown, setIsShown] = useState(false);
 
     const [experienceData, setExperienceData] = useState(props.experienceData || {
@@ -30,6 +32,7 @@ function Form(props) {
         event.preventDefault()
         props.onSubmit(experienceData)
         props.onClose()
+        navigate("/")
 
     }
 

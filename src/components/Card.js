@@ -6,7 +6,9 @@ import modernista from "../Assets/Modernista.png";
 
 
 
+
 function Card({experience, onExperienceDelete, onExperienceEdit}){
+
 
     const [isShown, setIsShown] = useState(false);
 
