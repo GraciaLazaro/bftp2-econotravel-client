@@ -3,11 +3,15 @@ import "../Styles/App.css";
 import "../Styles/Form.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 import {useNavigate} from "react-router-dom";
+import useCollapse from "react-collapsed";
 
 function Form(props) {
 
     const navigate = useNavigate();
     const [isShown, setIsShown] = useState(false);
+    const [isExpanded, setExpanded] = useState(false);
+    const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded, duration: 2 });
+
 
     const [experienceData, setExperienceData] = useState(props.experienceData || {
         name: '',
@@ -57,7 +61,10 @@ function Form(props) {
                                     : <img className="image" src={defaultPhoto} alt="photo"/>}
                                 {isShown && (
                                     <div className="hover-layer">
-                                        <button type="button" className="btn btn-icon">
+                                        <button type="button" className="btn btn-icon"
+                                                {...getToggleProps({
+                                                    onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+                                                })}>
                                             <i className="far fa-edit"/>
                                             <span>editar</span>
                                         </button>
@@ -66,7 +73,7 @@ function Form(props) {
                             <div className="filters-row">
                             </div>
                             <input placeholder="Añade URL de la imagen" value={experienceData.image} onChange={handleInputChange} type="text" id=""
-                                   name="image" className="form-img"/>
+                                   name="image" className="form-img" {...getCollapseProps()}/>
                         </div>
                         <div className="form-main">
                             <div className="input-group">
