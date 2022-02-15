@@ -39,7 +39,7 @@ function Card({experience, onExperienceDelete, onExperienceEdit}){
                 </figure>
                 <div className="card-description">
                    <h2 className="card-title">{experience.name}</h2>
-                    <p className="card-price">{experience.price + '€'}</p>
+                    <p className="card-price">{experience.price.toFixed(2) + '€'}</p>
                     <p className="card-price-detail">por persona</p>
                     <p>{experience.duration}</p>
                 </div>
