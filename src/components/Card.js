@@ -7,7 +7,7 @@ import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 
 
 
-function Card({experience, onExperienceDelete, onExperienceEdit}){
+function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDetail}){
 
 
     const [isShown, setIsShown] = useState(false);
@@ -21,7 +21,7 @@ function Card({experience, onExperienceDelete, onExperienceEdit}){
                         : <img className="image" src={defaultPhoto} alt="photo"/>}
                     {isShown && (
                     <div className="hover-layer">
-                    <button className="btn btn-icon">
+                    <button onClick={onExperienceDetail} className="btn btn-icon">
                         <i className="far fa-eye"/>
                         <span>ver más</span>
                     </button>
