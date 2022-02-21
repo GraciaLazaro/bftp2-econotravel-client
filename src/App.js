@@ -7,13 +7,14 @@ import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import Enquires from "./components/Enquires";
 import Form from "./components/Form";
+import ExperienceDetail from "./components/ExperienceDetail";
 
 function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
-
+    const [showExperience, setShowExperience] = useState(false);
     useEffect(() => {
         if (requiresUpdate) {
             fetch("http://localhost:8080/api/experiences")

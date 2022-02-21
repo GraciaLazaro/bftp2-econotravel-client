@@ -1,0 +1,33 @@
+.experience-detail button.btn-close{
+    margin: .8rem;
+}
+.detail-section{
+    padding: 0 1.5%;
+    height: calc(100% - 45px);
+    overflow-y: scroll;
+    display: flex;
+    top: 45px;
+}
+.detail-aside, .detail-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2%;
+    width: 50%;
+}
+
+.detail-aside{
+    top: -45px;
+    left: 0;
+}
+
+.detail-main{
+    right: 0;
+}
+
+.detail-section .h1{
+    font-size: 2.3rem;
+    text-align: left;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}

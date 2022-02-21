@@ -4,9 +4,6 @@ import "../Styles/App.css";
 import "../Styles/CardStyle.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 
-
-
-
 function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDetail}){
 
 
