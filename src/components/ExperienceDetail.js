@@ -3,16 +3,9 @@ import "../Styles/App.css";
 import "../Styles/Form.css";
 import "../Styles/ExperienceDetail.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
-import {useNavigate} from "react-router-dom";
-import useCollapse from "react-collapsed";
+
 
 function ExperienceDetail(props) {
-
-    const navigate = useNavigate();
-    const [isShown, setIsShown] = useState(false);
-    const [isExpanded, setExpanded] = useState(false);
-    const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded, duration: 2 });
-
 
     const [experienceData, setExperienceData] = useState(props.experienceData || {
         name: '',
@@ -23,22 +16,6 @@ function ExperienceDetail(props) {
         accessibility: '',
         accessibilityDescription: '',
     })
-
-    const handleInputChange = (event) => {
-        console.log(event.target.value)
-        setExperienceData({
-            ...experienceData,
-            [event.target.name]: event.target.value
-        })
-    }
-
-    const enviarDatos = (event) => {
-        event.preventDefault()
-        props.onSubmit(experienceData)
-        props.onClose()
-        navigate("/")
-
-    }
 
     return (
         <div className="hover-layer fixed-position">
@@ -69,7 +46,7 @@ function ExperienceDetail(props) {
                             <div>Familiar</div>
                         </div>
                         <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">
-                            {props.experienceData ? 'Guardar cambios' : 'Guardar'}
+                            {props.experienceData ? 'Reserva Ya' : 'Reserva'}
                         </button>
                         <div>{experienceData.description}</div>
                     </div>
