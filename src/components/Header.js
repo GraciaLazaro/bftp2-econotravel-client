@@ -16,7 +16,7 @@ function Header(props){
                    <ul className="main-nav">
                        <li><Link activeclassname="active" className="link" to="/">Inicio</Link></li>
                        <li><Link activeclassname="active" className="link" to="/AboutUs">Quiénes somos</Link></li>
-                       <li><Link activeclassname="active" className="link" to="/Enquires">Contacta</Link></li>
+                       <li><Link activeclassname="active" className="link" to="/Enquires">Contacta y Reserva</Link></li>
                        <li className="link" onClick={props.onButtonClicked}>Añadir Experiencia</li>
                    </ul>
               </nav>

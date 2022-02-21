@@ -1,12 +1,18 @@
 .experience-detail button.btn-close{
     margin: .8rem;
 }
-.detail-section{
+
+.experience-detail section{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.detail-content{
     padding: 0 1.5%;
     height: calc(100% - 45px);
     overflow-y: scroll;
     display: flex;
-    top: 45px;
 }
 .detail-aside, .detail-main {
     display: flex;

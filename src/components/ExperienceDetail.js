@@ -23,34 +23,36 @@ function ExperienceDetail(props) {
                 <button type="button" className="btn btn-close" onClick={props.onClose}>
                     <i className="far fa-times-circle gray"/>
                 </button>
-                <section className="detail-section">
-                    <div className="detail-aside">
-                        <div className="">
-                            <figure className="form-img">
-                                {props.experienceData ?
-                                    <img className="image" src={experienceData.image} alt="photo"/>
-                                    : <img className="image" src={defaultPhoto} alt="photo"/>}
-                            </figure>
-                            <div className="detail-accessibility-description">
-                                {experienceData.accessibilityDescription}
+                <section>
+                    <div className="detail-content">
+                        <div className="detail-aside">
+                            <div className="">
+                                <figure className="form-img">
+                                    {props.experienceData ?
+                                        <img className="image" src={experienceData.image} alt="photo"/>
+                                        : <img className="image" src={defaultPhoto} alt="photo"/>}
+                                </figure>
+                                <div className="detail-accessibility-description">
+                                    {experienceData.accessibilityDescription}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="detail-main">
-                        <div className="page-header">
-                                <h1 className="h1">{experienceData.name}</h1>
+                        <div className="detail-main">
+                            <div className="page-header">
+                                    <h1 className="h1">{experienceData.name}</h1>
+                            </div>
+                            <div className="input-group-row-3">
+                                <div>{experienceData.price}</div>
+                                <div>{experienceData.duration}</div>
+                                <div>Familiar</div>
+                            </div>
+                            <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">
+                                {props.experienceData ? 'Reserva Ya' : 'Reserva'}
+                            </button>
+                            <div>{experienceData.description}</div>
                         </div>
-                        <div className="input-group-row">
-                            <div>{experienceData.price}</div>
-                            <div>{experienceData.duration}</div>
-                            <div>Familiar</div>
-                        </div>
-                        <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">
-                            {props.experienceData ? 'Reserva Ya' : 'Reserva'}
-                        </button>
-                        <div>{experienceData.description}</div>
                     </div>
-            </section>
+                </section>
 
             </div>
         </div>
