@@ -4,7 +4,7 @@ import "../Styles/App.css";
 import "../Styles/CardStyle.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 
-function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDetail}){
+function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDetail, loggedIn}){
 
 
     const [isShown, setIsShown] = useState(false);
@@ -16,22 +16,28 @@ function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDet
                 <figure>
                     {experience.image ? <img className="image" src={experience.image} alt="photo"/>
                         : <img className="image" src={defaultPhoto} alt="photo"/>}
-                    {isShown && (
                     <div className="hover-layer">
-                    <button onClick={onExperienceDetail} className="btn btn-icon">
-                        <i className="far fa-eye"/>
-                        <span>ver más</span>
-                    </button>
-                        <button onClick={onExperienceEdit} className="btn btn-icon">
-                            <i className="far fa-edit"/>
-                            <span>Editar</span>
-                        </button>
-                        <button onClick={onExperienceDelete} className="btn btn-icon">
-                            <i  className="far fa-trash-alt"/>
-                            <span >Borrar</span>
-                        </button>
+                        {isShown && (
+                            <>
+                                <button onClick={onExperienceDetail} className="btn btn-icon">
+                                    <i className="far fa-eye"/>
+                                    <span>ver más</span>
+                                </button>
+                            </>
+                        )}
+                        {(loggedIn && isShown) && (
+                            <>
+                                <button onClick={onExperienceEdit} className="btn btn-icon">
+                                    <i className="far fa-edit"/>
+                                    <span>Editar</span>
+                                </button>
+                                <button onClick={onExperienceDelete} className="btn btn-icon">
+                                    <i className="far fa-trash-alt"/>
+                                    <span>Borrar</span>
+                                </button>
+                            </>
+                        )}
                     </div>
-                    )}
 
                 </figure>
                 <div className="card-description">

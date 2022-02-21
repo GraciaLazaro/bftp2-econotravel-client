@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
 
 import {NavLink as Link} from "react-router-dom"
 
 function Header(props){
+
 
     return(
       <header className="header">
@@ -18,6 +19,9 @@ function Header(props){
                        <li><Link activeclassname="active" className="link" to="/AboutUs">Quiénes somos</Link></li>
                        <li><Link activeclassname="active" className="link" to="/Enquires">Contacta</Link></li>
                        <li className="link" onClick={props.onButtonClicked}>Añadir Experiencia</li>
+                       {!props.loggedIn ? <li className="link" onClick={() => props.onLoginChange(true)}>Login</li>
+                           : <li className="link" onClick={() => props.onLoginChange(false)}>Logout</li>
+                       }
                    </ul>
               </nav>
           </div>

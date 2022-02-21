@@ -15,6 +15,8 @@ function App() {
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
     useEffect(() => {
         if (requiresUpdate) {
             fetch("http://localhost:8080/api/experiences")
@@ -47,11 +49,11 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Header onButtonClicked={() => setShowForm(true)} />
+            <Header onButtonClicked={() => setShowForm(true)} onLoginChange={ (isActive) => setIsLoggedIn(isActive)} loggedIn={isLoggedIn}/>
             { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Routes>
-                <Route path="/" index element={<Home experiences={experiences} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
-                <Route path="/AboutUs" element={<AboutUs />} />
+                <Route path="/" index element={<Home loggedIn={isLoggedIn} experiences={experiences} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
+                <Route path="/AboutUs" element={<AboutUs />} />l
                 <Route path="/Enquires" element={<Enquires />} />
                 <Route path="*" element={<Navigate replace to="/"/>} />
             </Routes>
