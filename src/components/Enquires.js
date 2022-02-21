@@ -1,3 +1,5 @@
+import {ContactUs} from "./ContactUs";
+
 function Enquires() {
 
     return (

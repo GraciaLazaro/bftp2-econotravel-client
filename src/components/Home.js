@@ -10,7 +10,7 @@ function Home({experiences, deleteExperience, editExperience}) {
     const [showForm, setShowForm] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
     const [showExperienceDetail, setShowExperienceDetail] = useState(false);
-    const [experienceToEdit, setExperienceToEdit] = useState({name: "hola", price: 50.00, image:"img"})
+    const [experienceToEdit, setExperienceToEdit] = useState({})
 
 
     return (
@@ -20,11 +20,11 @@ function Home({experiences, deleteExperience, editExperience}) {
                 {experiences.map(experience =>
                     <Card experience={experience} key={experience.id}
                           onExperienceEdit={()=>{setExperienceToEdit(experience); setShowForm (true)}}
-                          onExperienceDetail={()=>{setShowExperience(experience); setShowExperience (true)}}
+                          onExperienceDetail={()=>{setShowExperienceDetail(experience); setShowExperience (true)}}
                           onExperienceDelete={ () => deleteExperience(experience.id)} />)}
             </section>
             { showForm && <Form experienceData = {experienceToEdit} onSubmit={e => editExperience(e)} onClose={()=>setShowForm(false)}/>}
-            { showExperience && <ExperienceDetail experienceData = {experienceToEdit} onClose={()=>setShowExperience(false)}/>}
+            { showExperience && <ExperienceDetail experienceData = {showExperienceDetail} onClose={()=>setShowExperience(false)}/>}
         </main>
     );
 }
