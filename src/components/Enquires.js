@@ -1,3 +1,5 @@
+import FormReservation from "./FormReservation";
+
 function Enquires() {
 
     return (
@@ -14,6 +16,9 @@ function Enquires() {
                 <li>Dirección: Carrer dels Viatgers, 28, 08001 Barcelona</li>
                 </ul>
             </div>
+
+            <FormReservation/>
+
         </main>
     )
 }

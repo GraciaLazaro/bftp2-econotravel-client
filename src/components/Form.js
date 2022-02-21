@@ -88,7 +88,7 @@ function Form(props) {
                                           name="description" id="description" cols="30" rows="5"
                                           className="form-description"/>
                             </div>
-                            <div className="input-group-row">
+                            <div className="input-group-row-3">
                                 <div>
                                     <label htmlFor="price">Precio</label>
                                     <input value={experienceData.price} onChange={handleInputChange} type="text"
