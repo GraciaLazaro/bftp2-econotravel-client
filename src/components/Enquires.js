@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import FormReservation from "./FormReservation";
+=======
+>>>>>>> d7cd6828da46b7e82f062ee42f750c7d31b2b0f7
 
 function Enquires() {
 
