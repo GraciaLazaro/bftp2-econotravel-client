@@ -40,7 +40,7 @@ function FormReservation(props) {
     }
 
     return (
-        <form onSubmit={enviarDatos} action="">
+        <form onSubmit={enviarDatos} className="no-scroll" action="">
             <fieldset>
                 <legend>Datos de la Reserva:</legend>
                 <div className="input-group">
