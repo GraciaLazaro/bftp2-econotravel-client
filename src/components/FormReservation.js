@@ -24,14 +24,6 @@ function FormReservation(props) {
         accessibilityDescription: '',
     })
 
-    const handleInputChange = (event) => {
-        console.log(event.target.value)
-        setExperienceData({
-            ...experienceData,
-            [event.target.name]: event.target.value
-        })
-    }
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -49,13 +41,13 @@ function FormReservation(props) {
                 <legend>Datos de la Reserva:</legend>
                 <div className="input-group">
                     <label htmlFor="">Nombre de la experiencia</label>
-                    <input type="text" id="experience-name" name="experience_name" className="form-title"/>
+                    <input type="text" required  id="experience-name" name="experience_name" className="form-title"/>
                 </div>
 
                 <div className="input-group-row-3">
                     <div>
                         <label htmlFor="">Participantes</label>
-                        <input type="text" id="participants" name="experience_participants" className=""/>
+                        <input type="number" id="participants" name="experience_participants" className=""/>
                     </div>
                     <div>
                         <label htmlFor="">Fecha</label>
@@ -84,9 +76,10 @@ function FormReservation(props) {
                         <label htmlFor="">Email</label>
                         <input id="user_email" name="user_email" className=""/>
                     </div>
-                    <div>
-                        <label htmlFor="">Teléfono</label>
-                        <input id="phone" name="user_phone" className=""/>
+                    <div id="input-wrapper">
+                        <label htmlFor="phone">Teléfono</label>
+                        <span>+34 </span>
+                         <input id="phone" name="user_phone" className=""/>
                     </div>
                 </div>
             </fieldset>
