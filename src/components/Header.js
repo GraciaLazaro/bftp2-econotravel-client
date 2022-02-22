@@ -18,10 +18,8 @@ function Header(props){
                        <li><Link activeclassname="active" className="link" to="/">Inicio</Link></li>
                        <li><Link activeclassname="active" className="link" to="/AboutUs">Quiénes somos</Link></li>
                        <li><Link activeclassname="active" className="link" to="/Enquires">Contacta y Reserva</Link></li>
-                       <li className="link" onClick={props.onButtonClicked}>Añadir Experiencia</li>
-                       {!props.loggedIn ? <li className="link" onClick={() => props.onLoginChange(true)}>Login</li>
-                           : <li className="link" onClick={() => props.onLoginChange(false)}>Logout</li>
-                       }
+                       {props.loggedIn && <li className="link" onClick={props.onButtonClicked}>Añadir Experiencia</li> }
+                       {props.loggedIn && <li className="link" onClick={() => props.onLoginChange(false)}>Logout</li>}
                    </ul>
               </nav>
           </div>
