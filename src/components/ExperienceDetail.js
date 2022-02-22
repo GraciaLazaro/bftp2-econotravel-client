@@ -61,7 +61,7 @@ function ExperienceDetail(props) {
                                     </div>
                                     <div>Familiar</div>
                                 </div>
-                                <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">{props.experienceData ? 'Reserva Ya' : 'Reserva'}<Link className="card-link" to="/Enquires"/></button>
+                              <Link className="btn btn-primary btn-modal card-link" to="/Enquires">Reserva Ya</Link>
                             </div>
                         </div>
                 </section>
