@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
-
+import SearchBar from "./SearchBar";
 import {NavLink as Link} from "react-router-dom"
 
-function Header(props){
+function Header(props, {experiences}){
 
 
     return(
@@ -22,6 +22,7 @@ function Header(props){
                        {props.loggedIn && <li className="link" onClick={() => props.onLoginChange(false)}>Logout</li>}
                    </ul>
               </nav>
+              <SearchBar experiences={experiences} />
           </div>
 
       </header>

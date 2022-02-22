@@ -51,7 +51,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Header onButtonClicked={() => setShowForm(true)} onLoginChange={ (isActive) => setIsLoggedIn(isActive)} loggedIn={isLoggedIn}/>
+            <Header onButtonClicked={() => setShowForm(true)} onLoginChange={ (isActive) => setIsLoggedIn(isActive)} loggedIn={isLoggedIn} experiences={experiences}/>
             { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Routes>
                 <Route path="/" index element={<Home loggedIn={isLoggedIn} experiences={experiences} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
