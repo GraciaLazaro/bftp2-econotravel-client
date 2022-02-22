@@ -8,12 +8,14 @@ import AboutUs from "./components/AboutUs";
 import Enquires from "./components/Enquires";
 import Form from "./components/Form";
 import ExperienceDetail from "./components/ExperienceDetail";
+import Login from "./components/Login";
 
 function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
+    const [showLoginForm, setShowLoginForm] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -55,9 +57,11 @@ function App() {
                 <Route path="/" index element={<Home loggedIn={isLoggedIn} experiences={experiences} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
                 <Route path="/AboutUs" element={<AboutUs />} />l
                 <Route path="/Enquires" element={<Enquires />} />
-                <Route path="*" element={<Navigate replace to="/"/>} />
+                <Route path="*" element={<Navigate replace to="/"/>}  />
             </Routes>
-            <Footer />
+            { showLoginForm && <Login onClose={() => setShowLoginForm(false)} />}
+
+            <Footer onButtonClicked={() => setShowLoginForm(true)}  />
         </BrowserRouter>
     );
 }
