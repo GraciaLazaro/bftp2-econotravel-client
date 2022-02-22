@@ -74,7 +74,7 @@ function FormReservation(props) {
                 <div className="input-group-row-2">
                     <div>
                         <label htmlFor="">Email</label>
-                        <input id="user_email" type="email" required name="user_email" pattern={"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"} className=""/>
+                        <input id="user_email" type="email" required name="user_email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" className=""/>
                     </div>
                     <div id="input-wrapper">
                         <label htmlFor="phone">Teléfono</label>
