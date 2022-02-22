@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import "../Styles/App.css";
 import "../Styles/Form.css";
 import {useNavigate} from "react-router-dom";
+import logo from "../Assets/econotravel-logo.png";
+import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 
 function Login(props) {
 
@@ -40,10 +42,14 @@ function Login(props) {
                     </button>
                 </section>
                 <form onSubmit={enviarLogIn} action="">
-                    <section>
+                    <section className="form-aside">
+                        <figure className="form-img">
+                            <img className="logo" src={logo} alt="logo"/>
+                        </figure>
+                    </section>
+                    <section className="form-main">
                         <div className="input-group">
                             <label htmlFor="">Usuario</label>
-                            <input onChange={handleInputChange} type="text" id="" name="user"/>
                             <input value={adminData.name} onChange={handleInputChange} type="text" id="" name="user"/>
                         </div>
                         <div className="input-group">
