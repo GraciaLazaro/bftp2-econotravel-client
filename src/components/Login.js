@@ -53,13 +53,11 @@ function Login(props) {
                     <section>
                         <div className="input-group">
                             <label htmlFor="">Usuario</label>
-                            <input onChange={handleInputChange} type="text" id=""
-                                   name="user"/>
+                            <input onChange={handleInputChange} type="text" id="" name="user"/>
                         </div>
                         <div className="input-group">
                             <label htmlFor="">Contraseña</label>
-                            <input value="" onChange={handleInputChange} type="password" id=""
-                                   name="password"/>
+                            <input value="" onChange={handleInputChange} type="password" id="" name="password"/>
                         </div>
                     </section>
                     <section className="form-buttons">
