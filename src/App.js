@@ -59,7 +59,7 @@ function App() {
                 <Route path="/Enquires" element={<Enquires />} />
                 <Route path="*" element={<Navigate replace to="/"/>}  />
             </Routes>
-            { showLoginForm && <Login onClose={() => setShowLoginForm(false)} />}
+            { showLoginForm && <Login onClose={() => setShowLoginForm(false)} onLoginChange={ (isActive) => setIsLoggedIn(isActive)} />}
 
             <Footer onButtonClicked={() => setShowLoginForm(true)}  />
         </BrowserRouter>

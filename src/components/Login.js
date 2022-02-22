@@ -22,6 +22,7 @@ function Login(props) {
 
     const enviarLogIn = (event) => {
         event.preventDefault()
+        props.onLoginChange(true)
         props.onClose()
         navigate("/")
 
