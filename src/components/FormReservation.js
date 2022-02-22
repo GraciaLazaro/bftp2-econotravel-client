@@ -64,22 +64,22 @@ function FormReservation(props) {
                 <div className="input-group-row-2">
                     <div>
                         <label htmlFor="">Nombre</label>
-                        <input id="user_name" name="user_name" className=""/>
+                        <input id="user_name" required name="user_name" className=""/>
                     </div>
                     <div>
                         <label htmlFor="">Apellido</label>
-                        <input id="user_lastName" name="user-lastName" className=""/>
+                        <input id="user_lastName" required name="user-lastName" className=""/>
                     </div>
                 </div>
                 <div className="input-group-row-2">
                     <div>
                         <label htmlFor="">Email</label>
-                        <input id="user_email" name="user_email" className=""/>
+                        <input id="user_email" type="email" required name="user_email" pattern={"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"} className=""/>
                     </div>
                     <div id="input-wrapper">
                         <label htmlFor="phone">Teléfono</label>
                         <span>+34 </span>
-                         <input id="phone" name="user_phone" className=""/>
+                         <input id="phone" type="tel" required name="user_phone" className=""/>
                     </div>
                 </div>
             </fieldset>
