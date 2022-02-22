@@ -51,3 +51,8 @@
 .card-container > .card-buttons{
     margin-top: auto;
 }
+
+.card-link, .card-link:hover {
+    color: white;
+    text-decoration: inherit;
+}

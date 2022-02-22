@@ -3,6 +3,7 @@ import { useState } from 'react';
 import "../Styles/App.css";
 import "../Styles/CardStyle.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
+import {NavLink as Link} from "react-router-dom";
 
 function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDetail, loggedIn}){
 
@@ -43,7 +44,7 @@ function Card({experience, onExperienceDelete, onExperienceEdit, onExperienceDet
                     <p>{experience.duration}</p>
                 </div>
                 <div className="card-buttons">
-                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservar</button>
+                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><Link className="card-link" to="/Enquires">Reservar</Link></button>
                 </div>
 
             </div>

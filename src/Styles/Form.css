@@ -96,3 +96,18 @@ padding: 25px 15px 20px 15px;
 .hover-layer > .form-bg > .page-title h1 {
 margin: 0;
 }
+
+
+#input-wrapper {
+    position: relative;
+}
+
+#input-wrapper span {
+    position: absolute;
+    top: 56%;
+    margin-left: 10px;
+}
+
+#input-wrapper input {
+    text-indent: 20px;
+}
