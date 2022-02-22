@@ -79,7 +79,7 @@ function FormReservation(props) {
                     <div id="input-wrapper">
                         <label htmlFor="phone">Teléfono</label>
                         <span>+34 </span>
-                         <input id="phone" type="tel" required name="user_phone" className=""/>
+                         <input id="phone" type="tel" required name="user_phone" pattern={"^(?:\\s*-*\\s*\\d){9}$"} className=""/>
                     </div>
                 </div>
             </fieldset>

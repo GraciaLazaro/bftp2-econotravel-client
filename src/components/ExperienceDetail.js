@@ -3,6 +3,7 @@ import "../Styles/App.css";
 import "../Styles/Form.css";
 import "../Styles/ExperienceDetail.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
+import {NavLink as Link} from "react-router-dom";
 
 
 function ExperienceDetail(props) {
@@ -60,9 +61,7 @@ function ExperienceDetail(props) {
                                     </div>
                                     <div>Familiar</div>
                                 </div>
-                                <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">
-                                    {props.experienceData ? 'Reserva Ya' : 'Reserva'}
-                                </button>
+                                <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">{props.experienceData ? 'Reserva Ya' : 'Reserva'}<Link className="card-link" to="/Enquires"/></button>
                             </div>
                         </div>
 
