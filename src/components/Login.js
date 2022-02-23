@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import "../Styles/App.css";
-import "../Styles/Form.css";
+import "../Styles/FormStyle.css";
+import "../Styles/LoginStyle.css";
 import {useNavigate} from "react-router-dom";
 import logo from "../Assets/econotravel-logo.png";
-import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
+
 
 function Login(props) {
 
@@ -41,7 +42,7 @@ function Login(props) {
                         <i className="far fa-times-circle gray"/>
                     </button>
                 </section>
-                <form onSubmit={enviarLogIn} action="">
+                <form className="login-form" onSubmit={enviarLogIn} action="">
                     <section className="form-aside">
                         <figure className="form-img">
                             <img className="logo" src={logo} alt="logo"/>

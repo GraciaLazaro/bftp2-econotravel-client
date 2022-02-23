@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "../Styles/App.css";
-import "../Styles/Form.css";
+import "../Styles/FormStyle.css";
 import "../Styles/ExperienceDetail.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 import {NavLink as Link} from "react-router-dom";
@@ -61,7 +61,10 @@ function ExperienceDetail(props) {
                                     </div>
                                     <div>Familiar</div>
                                 </div>
-                              <Link className="btn btn-primary btn-modal card-link" to="/Enquires">Reserva Ya</Link>
+                                <section className="form-buttons">
+                                    <Link className="btn btn-primary btn-modal card-link" to="/Enquires">Reserva Ya</Link>
+                                </section>
+
                             </div>
                         </div>
                 </section>

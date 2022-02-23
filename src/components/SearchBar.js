@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../Styles/SearchBarStyle.css";
 
 function SearchBar(props) {
 
@@ -24,13 +25,13 @@ function SearchBar(props) {
     }
 
     return (
-        <>
-        <form className="form" onSubmit={handleSubmit}>
-            <i className="fa fa-search"></i>
-            <input type="search" className="form-control form-input" placeholder="Busca tu experiencia" onChange={handleChange}/>
-            <span className="left-pan"><i className="fa fa-microphone"></i></span>
-        </form>
-        </>
+        <nav className="search-bar">
+            <form className="form" onSubmit={handleSubmit}>
+                <i className="fa fa-search gray"></i>
+                <input type="search" className="form-control form-input" placeholder="Busca tu experiencia" onChange={handleChange}/>
+
+            </form>
+        </nav>
     )
 }
 

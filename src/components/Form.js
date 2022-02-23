@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "../Styles/App.css";
-import "../Styles/Form.css";
+import "../Styles/FormStyle.css";
 import defaultPhoto from "../Assets/econotravel-photo-default.jpg";
 import {useNavigate} from "react-router-dom";
 import useCollapse from "react-collapsed";

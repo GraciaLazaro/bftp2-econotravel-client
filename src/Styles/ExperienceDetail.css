@@ -12,6 +12,14 @@
     margin-top: inherit;
 }
 
+.detail-section .form-buttons{
+    height: inherit;
+    align-items: inherit;
+}
+.detail-section .btn-modal{
+    width: 75%;
+}
+
 .detail-section .h1{
     font-size: 2rem;
     text-align: left;
@@ -54,6 +62,7 @@
     grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    padding: 0 3%;
 }
 
 .div1 {

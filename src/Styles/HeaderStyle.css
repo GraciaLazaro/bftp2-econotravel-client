@@ -19,7 +19,7 @@
 }
 
 nav{
-    width: calc(100% - 110px);
+    width: calc(100% - 400px);
 }
 
 nav ul{
@@ -31,11 +31,12 @@ nav ul{
 
 .link{
     transition: background-color .3s ease-out;
-    padding: 12px 28px;
+    padding: 12px 22px;
     text-transform: uppercase;
     font-weight: 600;
     color: #1f1d1d;
     text-decoration: none;
+    white-space: nowrap;
 }
 .link:hover{
     background-color: #F9F8F6;
@@ -52,9 +53,9 @@ a.active{
 
 a.active:after {
     content: '';
-    width: calc(100% - 56px);
+    width: calc(100% - 44px);
     position: absolute;
-    left: 28px;
+    left: 22px;
     bottom: 7px;
     border-width: 0 0 2px;
     border-style: solid;

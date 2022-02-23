@@ -1,16 +1,16 @@
 import React, {useState} from "react";
 import fundadora from "../Assets/fundadora.jpg";
 import "../Styles/App.css";
-import "../Styles/Form.css";
+import "../Styles/FormStyle.css";
 import "../Styles/AboutUs.css";
 
 function AboutUs() {
 
     return (
         <main className="container about">
-{/*            <div className="page-header">
+            <div className="page-header">
                 <div className="page-name"><h1 className="h1">Quienes Somos</h1></div>
-            </div>*/}
+            </div>
             <section className="about-section">
             <div className="parent-grid">
                 <div className="div1">

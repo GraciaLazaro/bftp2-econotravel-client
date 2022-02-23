@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import "../Styles/App.css";
-import "../Styles/Form.css";
+import "../Styles/FormStyle.css";
 import {useNavigate} from "react-router-dom";
 import emailjs from "@emailjs/browser";
 

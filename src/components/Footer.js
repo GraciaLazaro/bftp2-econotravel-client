@@ -9,7 +9,7 @@ function Footer(props){
                 <p>EconoTravel 2022 © Todos los derechos reservados</p>
             </div>
             <div className="admin-icons">
-                <button onClick={props.onButtonClicked} >Administrador</button>
+                <button className="btn" onClick={props.onButtonClicked} >Administrador</button>
                 <div className="follow-us">
                     <p>Síguenos en</p>
                     <span className="mx-2"><i className="fab fa-facebook"/></span>
