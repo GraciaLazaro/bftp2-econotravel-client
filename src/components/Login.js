@@ -12,7 +12,8 @@ function Login(props) {
     const [isShown, setIsShown] = useState(false);
 
     const [adminData, setAdminData] = useState({
-        name: '',
+        user: '',
+        password: '',
     })
 
     const handleInputChange = (event) => {
@@ -50,12 +51,12 @@ function Login(props) {
                     </section>
                     <section className="form-main">
                         <div className="input-group">
-                            <label htmlFor="">Usuario</label>
-                            <input value={adminData.name} onChange={handleInputChange} type="text" id="" name="user"/>
+                            <label htmlFor="user">Usuario</label>
+                            <input value={adminData.user} onChange={handleInputChange} type="text" id="user" name="user"/>
                         </div>
                         <div className="input-group">
-                            <label htmlFor="">Contraseña</label>
-                            <input value="" onChange={handleInputChange} type="password" id="" name="password"/>
+                            <label htmlFor="password">Contraseña</label>
+                            <input value={adminData.password} onChange={handleInputChange} type="password" id="password" name="password"/>
                         </div>
                     </section>
                     <section className="form-buttons">
