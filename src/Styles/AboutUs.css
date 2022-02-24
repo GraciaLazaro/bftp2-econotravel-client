@@ -78,6 +78,7 @@
     grid-area: 2 / 5 / 4 / 10;
     /*background-color: #d54e4e;*/
     z-index: 1;
+    padding: 0;
 }
 .about .div4 {
     padding: 20px 30px;

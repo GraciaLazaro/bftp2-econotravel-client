@@ -30,7 +30,7 @@
 
 
 .detail-img{
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
     border: 8px solid #ffffff;
     border-radius: 8px;
     height: 100%;
@@ -52,6 +52,12 @@
     border-radius: 10px;
     margin-bottom: 40px;
 }
+
+.detail-section .input-group-row-3 div {
+    justify-content: center;
+    align-items: center;
+}
+
 
 .parent-grid{
     width: 100%;

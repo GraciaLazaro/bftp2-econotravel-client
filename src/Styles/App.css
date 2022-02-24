@@ -175,3 +175,11 @@ option{
 .gray{
     color: #00000080;
 }
+
+.h2 {
+    text-transform: uppercase;
+    color: #939393;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}

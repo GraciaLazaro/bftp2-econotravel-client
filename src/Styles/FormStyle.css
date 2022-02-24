@@ -98,7 +98,6 @@ form > section{
     margin: 0;
 }
 
-
 #input-wrapper {
     position: relative;
 }
@@ -110,5 +109,5 @@ form > section{
 }
 
 #input-wrapper input {
-    text-indent: 20px;
+    text-indent: 38px;
 }

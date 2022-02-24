@@ -62,7 +62,7 @@ function ExperienceDetail(props) {
                                     <div>Familiar</div>
                                 </div>
                                 <section className="form-buttons">
-                                    <Link className="btn btn-primary btn-modal card-link" to="/Enquires">Reserva Ya</Link>
+                                    <Link className="btn btn-primary btn-modal card-link" to="/Enquires">Reservar</Link>
                                 </section>
 
                             </div>

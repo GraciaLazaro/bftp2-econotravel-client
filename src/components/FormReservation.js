@@ -85,7 +85,7 @@ function FormReservation(props) {
             </fieldset>
             <section className="form-buttons">
                 <button type="submit" className="btn btn-primary btn-modal" data-toggle="" data-target="">
-                    Reservar
+                    Reservar Ya
                 </button>
             </section>
         </form>
