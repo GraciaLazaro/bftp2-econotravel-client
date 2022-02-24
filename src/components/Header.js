@@ -4,7 +4,7 @@ import logo from "../Assets/econotravel-logo.png";
 import SearchBar from "./SearchBar";
 import {NavLink as Link} from "react-router-dom"
 
-function Header(props, {handleSearch}){
+function Header(props){
 
 
     return(
@@ -27,7 +27,7 @@ function Header(props, {handleSearch}){
                   <SearchBar filter={props.filter} experiences={props.experiences} />
                   {props.loggedIn &&  <div className="icon-user">
                       <i className="fa-solid fa-user"/>
-                      <p>Hola, María Casas!</p>
+                      <p>Hola, {props.user.username}!</p>
                       <button className="btn btn-primary" onClick={() => props.onLoginChange(false)}>Logout</button>
                   </div>
                   }
