@@ -41,7 +41,16 @@ function FormReservation(props) {
                 <legend>Datos de la Reserva:</legend>
                 <div className="input-group">
                     <label htmlFor="">Nombre de la experiencia</label>
-                    <input type="text" required  id="experience-name" name="experience_name" className="form-title"/>
+                    <select required id="experience-name" name="experience_name" className="form-title">
+                        <option disabled selected hidden>Escoge una experiencia</option>
+                        <option value="Paseo en bicicleta por el Montseny">Paseo en bicicleta por el Montseny</option>
+                        <option value="Descubre la costa en barco de vela">Descubre la costa en barco de vela</option>
+                        <option value="Descubre la Barcelona modernista de noche">Descubre la Barcelona modernista de noche</option>
+                        <option value="Del huerto a la mesa">Del huerto a la mesa</option>
+                        <option value="Excursión en Kayak">Excursión en Kayak</option>
+                        <option value="Explorando los cielos">Explorando los cielos</option>
+                    </select>
+
                 </div>
 
                 <div className="input-group-row-3">
