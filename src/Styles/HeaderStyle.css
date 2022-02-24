@@ -11,6 +11,7 @@
     width: 105px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo-container img{
@@ -19,7 +20,10 @@
 }
 
 nav{
-    width: calc(100% - 400px);
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+
 }
 
 nav ul{
@@ -29,7 +33,7 @@ nav ul{
     align-items: center;
 }
 
-.link{
+.link {
     transition: background-color .3s ease-out;
     padding: 12px 22px;
     text-transform: uppercase;
@@ -66,3 +70,9 @@ a.active:hover{
     cursor: initial;
 }
 
+.icon-user {
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    align-items: center;
+}

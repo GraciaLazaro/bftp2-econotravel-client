@@ -11,7 +11,6 @@ function Home({experiences, deleteExperience, editExperience, loggedIn}) {
     const [showExperienceDetail, setShowExperienceDetail] = useState(false);
     const [experienceToEdit, setExperienceToEdit] = useState({})
 
-
     return (
         <main className="container">
             <PageHeader/>

@@ -4,7 +4,7 @@ import logo from "../Assets/econotravel-logo.png";
 import SearchBar from "./SearchBar";
 import {NavLink as Link} from "react-router-dom"
 
-function Header(props, {experiences}){
+function Header(props, {handleSearch}){
 
 
     return(
@@ -15,14 +15,24 @@ function Header(props, {experiences}){
               </div>
               <nav>
                    <ul className="main-nav">
-                       <li><Link activeclassname="active" className="link" to="/">Inicio</Link></li>
-                       <li><Link activeclassname="active" className="link" to="/AboutUs">Quiénes somos</Link></li>
-                       <li><Link activeclassname="active" className="link" to="/Enquires">Contacta y Reserva</Link></li>
+                       {!props.loggedIn ?
+                       <>
+                           <li><Link activeclassname="active" className="link" to="/">Inicio</Link></li>
+                           <li><Link activeclassname="active" className="link" to="/AboutUs">Quiénes somos</Link></li>
+                           <li><Link activeclassname="active" className="link" to="/Enquires">Contacta y Reserva</Link></li>
+                       </>  : ''
+                        }
                        {props.loggedIn && <li className="link" onClick={props.onButtonClicked}>Añadir Experiencia</li> }
-                       {props.loggedIn && <li className="link" onClick={() => props.onLoginChange(false)}>Logout</li>}
                    </ul>
+                  <SearchBar filter={props.filter} experiences={props.experiences} />
+                  {props.loggedIn &&  <div className="icon-user">
+                      <i className="fa-solid fa-user"/>
+                      <p>Hola, María Casas!</p>
+                      <button className="btn btn-primary" onClick={() => props.onLoginChange(false)}>Logout</button>
+                  </div>
+                  }
               </nav>
-              <SearchBar experiences={experiences} />
+
           </div>
 
       </header>
