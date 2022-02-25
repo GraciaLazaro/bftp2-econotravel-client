@@ -1,6 +1,7 @@
 import PageHeader from "./PagesHeader";
 import Card from "./Card";
 import Form from "./Form";
+import Hero from "./Hero";
 import ExperienceDetail from "./ExperienceDetail";
 import {useState} from "react";
 
@@ -12,6 +13,8 @@ function Home({experiences, deleteExperience, editExperience, loggedIn}) {
     const [experienceToEdit, setExperienceToEdit] = useState({})
 
     return (
+        <>
+        <Hero/>
         <main className="container">
             <PageHeader/>
             <section className="page-content card-grid">
@@ -30,11 +33,13 @@ function Home({experiences, deleteExperience, editExperience, loggedIn}) {
                     />)
                 }
             </section>
-            {showForm && <Form experienceData={experienceToEdit} onSubmit={e => editExperience(e)}
+            {showForm &&
+                <Form experienceData={experienceToEdit} onSubmit={e => editExperience(e)}
                                onClose={() => setShowForm(false)}/>}
             {showExperience &&
                 <ExperienceDetail experienceData={showExperienceDetail} onClose={() => setShowExperience(false)}/>}
         </main>
+        </>
     );
 }
 
