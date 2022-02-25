@@ -14,7 +14,7 @@ function PageHeader(props){
     return(
     <header  className="page-header">
         <div className="page-name">
-            {props.keyword !== '' ? <h1 className="h1">Experiencias encontradas con "{props.keyword}"</h1> :
+            {props.keyword !== undefined ? <h1 className="h1">Experiencias encontradas con "{props.keyword}"</h1> :
                 <h1 className="h1">Experiencias</h1>   }
         </div>
         <button className="align-right btn btn-filters"

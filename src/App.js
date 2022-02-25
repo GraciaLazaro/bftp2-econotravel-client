@@ -15,7 +15,7 @@ function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [experiencesToShow, setExperiencesToShow] = useState([]);
-    const [keyword, setKeyword] = useState([]);
+    const [keyword, setKeyword] = useState();
     const [reference, setReference] = useState()
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
