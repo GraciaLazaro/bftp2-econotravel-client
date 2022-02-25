@@ -14,7 +14,7 @@ function Hero() {
                           to="page-header"
                           spy={true}
                           smooth={true}
-                          offset={-50}
+                          offset={-140}
                           duration={500}
                     >
                         Explora</Link>

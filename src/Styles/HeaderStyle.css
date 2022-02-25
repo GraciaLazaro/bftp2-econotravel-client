@@ -1,5 +1,9 @@
 .header{
     background-color: #fff;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+
 }
 .header > .container{
     padding: 5px 0;

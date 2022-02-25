@@ -1,6 +1,7 @@
 .hero-bg{
     width: 100%;
-    height: calc(100vh - 81px);
+    /*height: calc(100vh - 81px);*/
+    height: 100vh;
     background-color: rgba(0,0,0,0.9);
     background-image: url("../Assets/hero-photo.jpg");
     background-repeat: no-repeat;
@@ -40,6 +41,7 @@
     width: 45%;
     height: 100%;
     margin-left: 5%;
+    margin-top: 90px;
 
 }
 
