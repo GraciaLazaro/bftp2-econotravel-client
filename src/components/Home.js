@@ -14,7 +14,7 @@ function Home({experiences, deleteExperience, editExperience, loggedIn}) {
 
     return (
         <>
-        <Hero/>
+            {!loggedIn &&  <Hero/>}
         <main className="container">
             <PageHeader/>
             <section className="page-content card-grid">
