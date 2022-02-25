@@ -59,7 +59,7 @@ function ExperienceDetail(props) {
                                         <p className="card-price">{experienceData.duration}</p>
                                         <p className="card-price-detail">horas</p>
                                     </div>
-                                    <div>Familiar</div>
+                                    {/*<div>Familiar</div>*/}
                                 </div>
                                 <section className="form-buttons">
                                     <Link className="btn btn-primary btn-modal card-link" to="/Enquires">Reservar</Link>

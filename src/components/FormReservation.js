@@ -52,7 +52,7 @@ function FormReservation(props) {
                         <input  type="date" id="date"  name="experience_date" className=""/>
                     </div>
                     <div>
-                        <label htmlFor="">Hora (every 30min)</label>
+                        <label htmlFor="">Hora (cada 30min)</label>
                         <input type="time" step="1800" name="experience_time" id="experience_time" className=""/>
                     </div>
                 </div>

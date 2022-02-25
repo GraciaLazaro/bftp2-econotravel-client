@@ -58,6 +58,9 @@
     align-items: center;
 }
 
+.detail-section .input-group-row-3{
+    justify-content: space-evenly;
+}
 
 .parent-grid{
     width: 100%;
