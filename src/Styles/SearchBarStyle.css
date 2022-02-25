@@ -1,7 +1,7 @@
 .search-bar{
     width: 28rem;
-    margin: auto 0;
     align-content: center;
+    margin-left: auto;
 }
 
 .search-bar .form {
