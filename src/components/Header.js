@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "../Styles/HeaderStyle.css";
 import logo from "../Assets/econotravel-logo.png";
 import SearchBar from "./SearchBar";
-import {NavLink as Link} from "react-router-dom"
+import {NavLink as Link} from "react-router-dom";
 
 function Header(props){
 

@@ -73,6 +73,6 @@ a.active:hover{
 .icon-user {
     display: flex;
     gap: 1rem;
-    padding: 10px;
+    padding: 0 10px 0 20px;
     align-items: center;
 }
