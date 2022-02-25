@@ -3,20 +3,22 @@ import Card from "./Card";
 import Form from "./Form";
 import Hero from "./Hero";
 import ExperienceDetail from "./ExperienceDetail";
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 
-function Home({experiences, deleteExperience, editExperience, loggedIn, keyword}) {
+function Home({experiences, deleteExperience, editExperience, loggedIn, keyword, setReference}) {
     const [showForm, setShowForm] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
     const [showExperienceDetail, setShowExperienceDetail] = useState(false);
     const [experienceToEdit, setExperienceToEdit] = useState({})
+    const reference = useRef()
+    setReference(reference)
 
     return (
         <>
             {!loggedIn &&  <Hero/>}
-        <main className="container">
-            <PageHeader keyword={keyword}/>
+        <main ref={reference} className="container">
+            <PageHeader  keyword={keyword}/>
             <section className="page-content card-grid">
                 {experiences.map(experience =>
                     <Card experience={experience} key={experience.id}

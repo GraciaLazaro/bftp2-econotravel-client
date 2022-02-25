@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import "../Styles/App.css";
 import "../Styles/FormStyle.css";
 import "../Styles/HeroStyle.css";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link} from "react-scroll";
 
 function Hero() {
 

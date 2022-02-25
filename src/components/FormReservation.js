@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useRef} from "react";
 import "../Styles/App.css";
 import "../Styles/FormStyle.css";
 import {useNavigate} from "react-router-dom";
@@ -11,18 +11,6 @@ function FormReservation(props) {
 
     const navigate = useNavigate();
     const form = useRef();
-    const [startDate, setStartDate] = useState(new Date());
-
-
-    const [experienceData, setExperienceData] = useState(props.experienceData || {
-        name: '',
-        image: '',
-        description: '',
-        price: '',
-        duration: '',
-        accessibility: '',
-        accessibilityDescription: '',
-    })
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -33,6 +21,7 @@ function FormReservation(props) {
             }, (error) => {
                 console.log(error.text);
             });
+        navigate("/");
     };
 
     return (
