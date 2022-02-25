@@ -4,8 +4,9 @@ import "../Styles/PageHeaderStyle.css";
 import "../Styles/FiltersStyle.css";
 import Filters from "./Filters";
 import useCollapse from 'react-collapsed';
+import {keyboard} from "@testing-library/user-event/dist/keyboard";
 
-function PageHeader(){
+function PageHeader(props){
 
     const [isExpanded, setExpanded] = useState(false);
     const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
@@ -13,7 +14,8 @@ function PageHeader(){
     return(
     <header className="page-header">
         <div className="page-name">
-            <h1 className="h1">Experiencias</h1>
+            {props.keyword !== '' ? <h1 className="h1">Experiencias encontradas con "{props.keyword}"</h1> :
+                 <h1 className="h1">Experiencias</h1> }
         </div>
         <button className="align-right btn btn-filters"
             {...getToggleProps({

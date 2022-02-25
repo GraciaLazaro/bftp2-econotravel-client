@@ -15,6 +15,7 @@ function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [experiencesToShow, setExperiencesToShow] = useState([]);
+    const [keyword, setKeyword] = useState([]);
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [showForm, setShowForm] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
@@ -62,6 +63,7 @@ function App() {
     const filter = (e) => {
         e.preventDefault();
         const keyword = e.target.value;
+        setKeyword(keyword)
 
         if (keyword !== '') {
             const results = experiences.filter((experience) => {
@@ -82,7 +84,7 @@ function App() {
                     user={user}   onLoginChange={ (isActive) => setIsLoggedIn(isActive)} loggedIn={isLoggedIn} experiences={experiences}/>
             { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Routes>
-                <Route path="/" index element={<Home loggedIn={isLoggedIn} experiences={experiencesToShow} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
+                <Route path="/" index element={<Home loggedIn={isLoggedIn} keyword={keyword} experiences={experiencesToShow} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
                 <Route path="/AboutUs" element={<AboutUs />} />l
                 <Route path="/Enquires" element={<Enquires />} />
                 <Route path="*" element={<Navigate replace to="/"/>}  />

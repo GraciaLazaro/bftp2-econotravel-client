@@ -6,7 +6,7 @@ import ExperienceDetail from "./ExperienceDetail";
 import {useState} from "react";
 
 
-function Home({experiences, deleteExperience, editExperience, loggedIn}) {
+function Home({experiences, deleteExperience, editExperience, loggedIn, keyword}) {
     const [showForm, setShowForm] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
     const [showExperienceDetail, setShowExperienceDetail] = useState(false);
@@ -16,7 +16,7 @@ function Home({experiences, deleteExperience, editExperience, loggedIn}) {
         <>
             {!loggedIn &&  <Hero/>}
         <main className="container">
-            <PageHeader/>
+            <PageHeader keyword={keyword}/>
             <section className="page-content card-grid">
                 {experiences.map(experience =>
                     <Card experience={experience} key={experience.id}
