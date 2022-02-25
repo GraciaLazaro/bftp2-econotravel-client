@@ -20,6 +20,7 @@ function App() {
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState([]);
 
     // API Fetch
 
@@ -77,7 +78,8 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Header filter={filter} onButtonClicked={() => setShowForm(true)} onLoginChange={ (isActive) => setIsLoggedIn(isActive)} loggedIn={isLoggedIn} experiences={experiences}/>
+            <Header filter={filter} onButtonClicked={() => setShowForm(true)}
+                    user={user}   onLoginChange={ (isActive) => setIsLoggedIn(isActive)} loggedIn={isLoggedIn} experiences={experiences}/>
             { showForm && <Form onSubmit={e => addExperience(e)} onClose={()=>setShowForm(false)}/>}
             <Routes>
                 <Route path="/" index element={<Home loggedIn={isLoggedIn} experiences={experiencesToShow} deleteExperience={deleteExperience} editExperience={addExperience} />}/>
@@ -85,7 +87,8 @@ function App() {
                 <Route path="/Enquires" element={<Enquires />} />
                 <Route path="*" element={<Navigate replace to="/"/>}  />
             </Routes>
-            { showLoginForm && <Login onClose={() => setShowLoginForm(false)} onLoginChange={ (isActive) => setIsLoggedIn(isActive)} />}
+            { showLoginForm && <Login onClose={() => setShowLoginForm(false)} onSubmit={e => setUser(e)}
+                                   user={user} setUser={setUser}  onLoginChange={ (isActive) => setIsLoggedIn(isActive)} />}
 
             <Footer onButtonClicked={() => setShowLoginForm(true)}  />
         </BrowserRouter>
