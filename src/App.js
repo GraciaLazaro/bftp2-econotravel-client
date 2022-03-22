@@ -27,7 +27,7 @@ function App() {
 
     useEffect(() => {
         if (requiresUpdate) {
-            fetch("http://localhost:8080/api/experiences")
+            fetch("/api/experiences")
                 .then(r => r.json())
                 .then(setExperiences)
                 .then(_ => setRequiresUpdate(false));
@@ -39,7 +39,7 @@ function App() {
     }, [experiences])
 
     const deleteExperience = (id) => {
-        fetch(`http://localhost:8080/api/experiences/delete/${id}`,
+        fetch(`/api/experiences/delete/${id}`,
             {
                 method: 'GET'
             }
@@ -48,7 +48,7 @@ function App() {
     }
 
     const addExperience = (experience) => {
-        fetch("http://localhost:8080/api/experiences",
+        fetch("/api/experiences",
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
